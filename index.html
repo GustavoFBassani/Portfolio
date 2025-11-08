@@ -28,6 +28,10 @@
         <div class="container">
             <!-- Header -->
             <div class="header">
+                <button @click="toggleLanguage" class="language-toggle" :title="currentLang === 'pt' ? 'Switch to English' : 'Mudar para Português'">
+                    <span class="flag-icon">{{ currentLang === 'pt' ? '🇺🇸' : '🇧🇷' }}</span>
+                    <span class="lang-text">{{ currentLang === 'pt' ? 'EN' : 'PT' }}</span>
+                </button>
                 <div class="header-content">
                     <div class="profile-section">
                         <img :src="profile.photo" alt="Foto de perfil" class="profile-image">
@@ -36,7 +40,7 @@
                                 {{ profile.name }}
                             </h1>
                             <div class="subtitle" :contenteditable="editMode" @blur="updateField('profile', 'title', $event)" class="editable">
-                                {{ profile.title }}
+                                {{ t(profile.title) }}
                             </div>
                         </div>
                     </div>
@@ -78,26 +82,26 @@
                         <svg fill="currentColor" viewBox="0 0 20 20" width="24" height="24">
                             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
                         </svg>
-                        Sobre Mim
+                        {{ t('aboutMe') }}
                     </button>
                     <button @click="openModal('experience')" class="info-button">
                         <svg fill="currentColor" viewBox="0 0 20 20" width="24" height="24">
                             <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
                             <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>
                         </svg>
-                        Experiência Profissional
+                        {{ t('professionalExperience') }}
                     </button>
                     <button @click="openModal('education')" class="info-button">
                         <svg fill="currentColor" viewBox="0 0 20 20" width="24" height="24">
                             <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
                         </svg>
-                        Formação Acadêmica
+                        {{ t('academicEducation') }}
                     </button>
                 </div>
 
                 <!-- Projetos na Apple Store -->
                 <div class="section">
-                    <h2 class="section-title">Projetos na Apple Store</h2>
+                    <h2 class="section-title">{{ t('appleStoreProjects') }}</h2>
                     <div class="projects-grid">
                         <a v-for="(project, index) in appleStoreProjects"
                            :key="index"
@@ -133,7 +137,7 @@
 
                 <!-- Projetos em Destaque -->
                 <div class="section">
-                    <h2 class="section-title">Projetos em Destaque</h2>
+                    <h2 class="section-title">{{ t('featuredProjects') }}</h2>
                     <div class="projects-grid">
                         <a v-for="(project, index) in featuredProjects"
                            :key="index"
@@ -169,7 +173,7 @@
 
                 <!-- Outros Projetos -->
                 <div class="section">
-                    <h2 class="section-title">Outros Projetos</h2>
+                    <h2 class="section-title">{{ t('otherProjects') }}</h2>
                     <div class="projects-grid">
                         <a v-for="(project, index) in otherProjects"
                            :key="index"
@@ -205,7 +209,7 @@
 
                 <!-- Habilidades -->
                 <div class="section">
-                    <h2 class="section-title">Habilidades Técnicas</h2>
+                    <h2 class="section-title">{{ t('technicalSkills') }}</h2>
                     <div class="skills-grid">
                         <div v-for="(category, catName) in skills" :key="catName" class="skill-category">
                             <h3 class="skill-category-title">{{ catName }}</h3>
@@ -220,7 +224,7 @@
 
                 <!-- Idiomas -->
                 <div class="section">
-                    <h2 class="section-title">Idiomas</h2>
+                    <h2 class="section-title">{{ t('languages') }}</h2>
                     <div class="languages-grid">
                         <div v-for="lang in languages" :key="lang.name" class="language-card">
                             <div class="language-name">{{ lang.name }}</div>
@@ -231,7 +235,7 @@
             </div>
         </div>
 
-        <!-- Modals -->
+        <!-- Modal -->
         <div v-if="activeModal" class="modal-overlay" @click="closeModal">
             <div class="modal-content" @click.stop>
                 <button class="modal-close" @click="closeModal">
@@ -240,34 +244,43 @@
                     </svg>
                 </button>
 
-                <!-- Modal Sobre Mim -->
+                <!-- About Modal -->
                 <div v-if="activeModal === 'about'" class="modal-body">
-                    <h2 class="modal-title">Sobre Mim</h2>
-                    <p class="about-text">{{ about }}</p>
+                    <h2 class="modal-title">{{ t('aboutMe') }}</h2>
+                    <p class="about-text">{{ t('aboutText') }}</p>
                 </div>
 
-                <!-- Modal Experiência -->
+                <!-- Experience Modal -->
                 <div v-if="activeModal === 'experience'" class="modal-body">
-                    <h2 class="modal-title">Experiência Profissional</h2>
-                    <div v-for="(exp, index) in experience" :key="index" class="timeline-item">
-                        <span class="timeline-date">{{ exp.period }}</span>
-                        <h3 class="timeline-title">{{ exp.position }}</h3>
-                        <div class="timeline-subtitle">{{ exp.company }}</div>
-                        <p class="timeline-description">{{ exp.description }}</p>
+                    <h2 class="modal-title">{{ t('professionalExperience') }}</h2>
+                    <div class="timeline">
+                        <div v-for="(exp, index) in currentExperience" :key="index" class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-position">{{ exp.position }}</div>
+                                <div class="timeline-period">{{ exp.period }}</div>
+                                <div v-if="exp.company" class="timeline-company">{{ exp.company }}</div>
+                                <div class="timeline-description">{{ exp.description }}</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Modal Formação -->
+                <!-- Education Modal -->
                 <div v-if="activeModal === 'education'" class="modal-body">
-                    <h2 class="modal-title">Formação Acadêmica</h2>
-                    <div v-for="(edu, index) in education" :key="index" class="timeline-item">
-                        <span class="timeline-date">{{ edu.period }}</span>
-                        <h3 class="timeline-title">{{ edu.degree }}</h3>
-                        <div class="timeline-subtitle">{{ edu.institution }}</div>
+                    <h2 class="modal-title">{{ t('academicEducation') }}</h2>
+                    <div class="timeline">
+                        <div v-for="(edu, index) in currentEducation" :key="index" class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-position">{{ edu.degree }}</div>
+                                <div class="timeline-period">{{ edu.period }}</div>
+                                <div class="timeline-company">{{ edu.institution }}</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 
     <script>
@@ -278,6 +291,33 @@
                 return {
                     editMode: false,
                     activeModal: null,
+                    currentLang: localStorage.getItem('lang') || 'pt',
+                    translations: {
+                        pt: {
+                            aboutMe: 'Sobre Mim',
+                            professionalExperience: 'Experiência Profissional',
+                            academicEducation: 'Formação Acadêmica',
+                            appleStoreProjects: 'Projetos na Apple Store',
+                            featuredProjects: 'Projetos em Destaque',
+                            otherProjects: 'Outros Projetos',
+                            technicalSkills: 'Habilidades Técnicas',
+                            languages: 'Idiomas',
+                            'Desenvolvedor iOS Mobile': 'Desenvolvedor iOS Mobile',
+                            aboutText: `Lecionei matemática por 10 anos, desde que me mudei para Porto Alegre, em 2013, inicialmente com o objetivo de cursar Engenharia Metalúrgica. No entanto, ao ingressar como professor no curso pré-vestibular popular PEAC, descobri na educação uma forma de unir trabalho e paixão pela matemática. Entre 2013 e 2017, vivenciei diversas experiências educacionais em diferentes contextos, o que me proporcionou uma base prática sólida antes mesmo de iniciar minha formação em Licenciatura em Matemática, em 2018. Essa vivência prévia contribuiu para tornar meus estudos mais significativos, pois já estava familiarizado com a realidade da sala de aula. Ao longo dessa jornada como educador, fui desenvolvendo um olhar atento para a maneira como a tecnologia impactava o aprendizado dos alunos, tanto como aliada quanto como linguagem natural para as novas gerações. Essa percepção despertou em mim a curiosidade por entender mais a fundo o mundo da programação e suas possibilidades. Nos últimos dois anos, comecei a repensar minha trajetória profissional e encontrei na tecnologia um novo propósito. Decidi iniciar uma transição de carreira, buscando unir minha base matemática à lógica e ao raciocínio exigidos na programação. Desde então, venho me dedicando intensamente aos estudos na área. Em 2025, fui selecionado para a Apple Developer Academy, onde desenvolvo projetos voltados ao ecossistema iOS, com foco em Swift, arquitetura de software, design de interfaces e trabalho em equipe multidisciplinar. No mesmo ano, iniciei o curso de Tecnologia em Sistemas para Internet no IFRS, aprofundando conhecimentos em algoritmos, estrutura de dados, programação orientada a objetos e banco de dados. Meu objetivo é construir uma base técnica sólida para atuar como um desenvolvedor moderno, capaz de resolver problemas reais por meio da tecnologia e contribuir de forma prática e eficiente para os desafios de empresas e equipes de desenvolvimento.`
+                        },
+                        en: {
+                            aboutMe: 'About Me',
+                            professionalExperience: 'Professional Experience',
+                            academicEducation: 'Academic Education',
+                            appleStoreProjects: 'Apple Store Projects',
+                            featuredProjects: 'Featured Projects',
+                            otherProjects: 'Other Projects',
+                            technicalSkills: 'Technical Skills',
+                            languages: 'Languages',
+                            'Desenvolvedor iOS Mobile': 'iOS Mobile Developer',
+                            aboutText: `I taught mathematics for 10 years, since I moved to Porto Alegre in 2013, initially with the goal of studying Metallurgical Engineering. However, when I joined as a teacher in the popular pre-university course PEAC, I discovered in education a way to unite work and passion for mathematics. Between 2013 and 2017, I experienced various educational experiences in different contexts, which provided me with a solid practical foundation even before starting my degree in Mathematics in 2018. This prior experience helped make my studies more meaningful, as I was already familiar with the classroom reality. Throughout this journey as an educator, I developed a keen eye for how technology impacted student learning, both as an ally and as a natural language for new generations. This perception awakened in me the curiosity to understand more deeply the world of programming and its possibilities. In the last two years, I began to rethink my professional trajectory and found in technology a new purpose. I decided to start a career transition, seeking to unite my mathematical foundation with the logic and reasoning required in programming. Since then, I have been intensively dedicating myself to studies in the area. In 2025, I was selected for the Apple Developer Academy, where I develop projects focused on the iOS ecosystem, with a focus on Swift, software architecture, interface design and multidisciplinary teamwork. In the same year, I started the Internet Systems Technology course at IFRS, deepening knowledge in algorithms, data structures, object-oriented programming and databases. My goal is to build a solid technical foundation to work as a modern developer, capable of solving real problems through technology and contributing in a practical and efficient way to the challenges of companies and development teams.`
+                        }
+                    },
                     profile: {
                         name: 'Gustavo Ferreira Bassani',
                         title: 'Desenvolvedor iOS Mobile',
@@ -286,51 +326,94 @@
                         location: 'Porto Alegre, RS',
                         photo: 'images/perfil.png'
                     },
-                    about: `Lecionei matemática por 10 anos, desde que me mudei para Porto Alegre, em 2013, inicialmente com o objetivo de cursar Engenharia Metalúrgica. No entanto, ao ingressar como professor no curso pré-vestibular popular PEAC, descobri na educação uma forma de unir trabalho e paixão pela matemática. Entre 2013 e 2017, vivenciei diversas experiências educacionais em diferentes contextos, o que me proporcionou uma base prática sólida antes mesmo de iniciar minha formação em Licenciatura em Matemática, em 2018. Essa vivência prévia contribuiu para tornar meus estudos mais significativos, pois já estava familiarizado com a realidade da sala de aula. Ao longo dessa jornada como educador, fui desenvolvendo um olhar atento para a maneira como a tecnologia impactava o aprendizado dos alunos, tanto como aliada quanto como linguagem natural para as novas gerações. Essa percepção despertou em mim a curiosidade por entender mais a fundo o mundo da programação e suas possibilidades. Nos últimos dois anos, comecei a repensar minha trajetória profissional e encontrei na tecnologia um novo propósito. Decidi iniciar uma transição de carreira, buscando unir minha base matemática à lógica e ao raciocínio exigidos na programação. Desde então, venho me dedicando intensamente aos estudos na área. Em 2025, fui selecionado para a Apple Developer Academy, onde desenvolvo projetos voltados ao ecossistema iOS, com foco em Swift, arquitetura de software, design de interfaces e trabalho em equipe multidisciplinar. No mesmo ano, iniciei o curso de Tecnologia em Sistemas para Internet no IFRS, aprofundando conhecimentos em algoritmos, estrutura de dados, programação orientada a objetos e banco de dados. Meu objetivo é construir uma base técnica sólida para atuar como um desenvolvedor moderno, capaz de resolver problemas reais por meio da tecnologia e contribuir de forma prática e eficiente para os desafios de empresas e equipes de desenvolvimento.`,
-                    experience: [
+                    experiencePt: [
                         {
                             period: '2025 - Presente',
                             position: 'Estudante Bolsista',
                             company: 'Apple Developer Academy.',
-                            description: 'Estudante bolsista no curso de desenvolvimento focado no ecossistema Apple.'
+                            description: 'Bolsista na Apple Developer Academy, onde desenvolvo habilidades em programação, design e trabalho em equipe. O programa é voltado à criação de soluções inovadoras para o ecossistema Apple, com foco em tecnologias como Swift, UIKit e SwiftUI. Durante a experiência, participo de projetos reais, sprints colaborativos e desafios de inovação que unem tecnologia e impacto social.'
                         },
                         {
                             period: '2013 - Presente',
-                            position: 'Professor particular de matemática',
-                            description: 'Aulas particulares de matemática para vestibulares como UFRGS, ENEM, IME, ITA e disciplinas de ensino superior.'
+                            position: 'Professor Particular de Matemática',
+                            description: 'Professor particular de Matemática, com foco em preparação para vestibulares como UFRGS, ENEM, IME e ITA, além de disciplinas de ensino superior. As aulas são personalizadas conforme o perfil do aluno, com ênfase em raciocínio lógico, clareza conceitual e resolução de problemas.'
                         },
                         {
                             period: '2022 - 2024',
-                            position: 'Professor de matemática',
+                            position: 'Professor de Matemática',
                             company: 'META.',
-                            description: 'Professor de matemática titular no curso pré-vestibular Meta.'
+                            description: 'Professor titular de Matemática no curso pré-vestibular Meta, com foco em preparação para o vestibular da UFRGS. As aulas abordavam teoria, técnicas de resolução e revisão estratégica dos principais conteúdos cobrados no exame.'
                         },
                         {
                             period: '2019 - 2024',
                             position: 'Professor particular de matemática',
                             company: 'Matemáticamente.',
-                            description: 'Professor de matemática titular no curso matematicamente, focado para vestibulares militares de Porto Alegre.'
+                            description: 'Professor titular de Matemática no curso Matematicamente, em Porto Alegre, com foco em preparação para vestibulares militares como CMPA e Tiradentes. Durante essa experiência, também ministrei aulas voltadas para ITA, IME, AFA, EFOMM e outros vestibulares em geral, além de aulas particulares personalizadas para diferentes níveis e objetivos.'
                         },
                         {
                             period: '2016 - 2019',
-                            position: 'Professor de matemática',
+                            position: 'Professor de Matemática',
                             company: 'AlphaHelp',
-                            description: 'Professor de matemática titular no curso pré-vestibular AlphaHelp.'
+                            description: 'Professor de Matemática no curso AlphaHelp, ministrando aulas particulares de reforço escolar e preparação para vestibulares como UFRGS e ENEM.'
                         },
                         {
                             period: '2014 - 2016',
-                            position: 'Professor de matemática',
+                            position: 'Professor de Matemática',
                             company: 'EducaMed',
-                            description: 'Professor particular no curso popular EducaMed.'
+                            description: 'Professor de Matemática no curso popular EducaMed, voltado à preparação para o ENEM e vestibulares, com foco em atender estudantes de baixa renda.'
+                        },  
+                        {
+                            period: '2013 - 2016',
+                            position: 'Professor de Matemática',
+                            company: 'PEAC',
+                            description: 'Professor titular de Matemática no curso popular PEAC (Projeto Educacional Alternativa Cidadã), atuando na preparação para o ENEM e vestibulares, com foco em inclusão educacional e acesso ao ensino superior.'
+                        }
+
+                    ],
+                    experienceEn: [
+                        {
+                            period: '2025 - Present',
+                            position: 'Scholarship Student',
+                            company: 'Apple Developer Academy.',
+                            description: 'Scholar at the Apple Developer Academy, where I develop skills in programming, design, and teamwork. The program is focused on creating innovative solutions for the Apple ecosystem, with emphasis on technologies such as Swift, UIKit, and SwiftUI. During the experience, I participate in real projects, collaborative sprints, and innovation challenges that combine technology and social impact.'
+                        },
+                        {
+                            period: '2013 - Present',
+                            position: 'Private Mathematics Tutor',
+                            description: 'Private Mathematics tutor, focused on preparation for entrance exams such as UFRGS, ENEM, IME, and ITA, as well as undergraduate courses. Classes are personalized according to the student\'s profile, with emphasis on logical reasoning, conceptual clarity, and problem-solving.'
+                        },
+                        {
+                            period: '2022 - 2024',
+                            position: 'Mathematics Teacher',
+                            company: 'META.',
+                            description: 'Lead Mathematics teacher at Meta pre-university preparatory course, focused on preparation for the UFRGS entrance exam. Classes covered theory, solving techniques, and strategic review of the main topics tested in the exam.'
+                        },
+                        {
+                            period: '2019 - 2024',
+                            position: 'Private Mathematics Tutor',
+                            company: 'Matemáticamente.',
+                            description: 'Lead Mathematics teacher at Matematicamente course in Porto Alegre, focused on preparation for military entrance exams such as CMPA and Tiradentes. During this experience, I also taught classes aimed at ITA, IME, AFA, EFOMM, and other entrance exams in general, as well as personalized private lessons for different levels and objectives.'
+                        },
+                        {
+                            period: '2016 - 2019',
+                            position: 'Mathematics Teacher',
+                            company: 'AlphaHelp',
+                            description: 'Mathematics teacher at AlphaHelp course, teaching private tutoring sessions for academic reinforcement and preparation for entrance exams such as UFRGS and ENEM.'
+                        },
+                        {
+                            period: '2014 - 2016',
+                            position: 'Mathematics Teacher',
+                            company: 'EducaMed',
+                            description: 'Mathematics teacher at the community-based EducaMed course, focused on preparation for ENEM and entrance exams, with emphasis on serving low-income students.'
                         },
                         {
                             period: '2013 - 2016',
-                            position: 'Professor de matemática',
-                            company: 'Peac',
-                            description: 'Professor de matemática titular no curso pré-vestibular popular PEAC - projeto educacional alternativa cidadã.'
+                            position: 'Mathematics Teacher',
+                            company: 'PEAC',
+                            description: 'Lead Mathematics teacher at the community-based PEAC course (Educational Project Alternative Citizenship), working on preparation for ENEM and entrance exams, focused on educational inclusion and access to higher education.'
                         }
                     ],
-                    education: [
+                    educationPt: [
 
                         {
                             period: '2025 - Presente',
@@ -343,71 +426,80 @@
                             institution: 'Universidade Federal do Rio Grande do Sul (UFRGS)'
                         }
                     ],
+                    educationEn: [
+                        {
+                            period: '2025 - Present',
+                            degree: 'Technologist in Internet Systems',
+                            institution: 'Federal Institute of Education, Science and Technology of Rio Grande do Sul (IFRS)'
+                        },
+                        {
+                            period: '2018 - 2022',
+                            degree: 'Bachelor Degree in Mathematics',
+                            institution: 'Federal University of Rio Grande do Sul (UFRGS)'
+                        }
+                    ],
                     skills: {
                         'Experiência sólida com:': [
-                            { name: 'Swift'},    
-                            { name: 'UIKit'},
-                            { name: 'SwiftUI'},
-                            { name: 'CoreData'},
-                            { name: 'SwiftData'},
-                            { name: 'Git/Github'},
-                            { name: 'MVC'},
-                            { name: 'MV'},
-                            { name: 'MVVM'},
-                            { name: 'Factory'},
-                            { name: 'Singleton'},
-                            { name: 'Design Responsivo'},
-                            { name: 'Figma'},
-                            
+                            { name: 'Swift' },
+                            { name: 'UIKit' },
+                            { name: 'SwiftUI' },
+                            { name: 'CoreData' },
+                            { name: 'SwiftData' },
+                            { name: 'Git/GitHub' },
+                            { name: 'MVC' },
+                            { name: 'MV' },
+                            { name: 'MVVM' },
+                            { name: 'Factory' },
+                            { name: 'Singleton' },
+                            { name: 'Responsive Design' },
+                            { name: 'Figma' },
                         ],
                         'Boa familiaridade': [
-                            { name: 'CloudKit'},
-                            { name: 'Concurrency'},
-                            { name: '(async/await, DispatchQueue)'},
-                            { name: 'Gerenciamento de memória'},
-                            { name: 'Gerenciamento de memória'},
-                            { name: 'Injeção de dependência'},
-                            { name: 'Design Patterns'},
-                            { name: 'Testes Unitários e UI Tests'},
-                            { name: 'Desenvolvimento para Apple WatchOS'},
-                            { name: 'Notificações locais e push'},
-                            { name: 'Acessibilidade'},
-                            { name: 'Ciclo de vida em UIKit e SwiftUI'},
-                            { name: 'Property Wrappers'},
-                            { name: 'Localização e internacionalização'},
-                            { name: 'Restful APIs'},
-                            { name: 'Tratamento de erros (try/throws)' },
+                            { name: 'CloudKit' },
+                            { name: 'Scrum/Agile' },
+                            { name: 'Concurrency' },
+                            { name: '(async/await, DispatchQueue)' },
+                            { name: 'Memory Management' },
+                            { name: 'Dependency Injection' },
+                            { name: 'Design Patterns' },
+                            { name: 'Unit and UI Testing' },
+                            { name: 'Apple WatchOS Development' },
+                            { name: 'Accessibility' },
+                            { name: 'Lifecycle in UIKit and SwiftUI' },
+                            { name: 'Property Wrappers' },
+                            { name: 'Localization and Internationalization' },
+                            { name: 'RESTful APIs' },
+                            { name: 'Error Handling (try/throws)' },
                         ],
                         'Conhecimento em desenvolvimento': [
-                            { name: 'Testes UI/units'},
-                            { name: 'CI/CD'},
-                            { name: 'Widgets em SwiftUI'},
-                            { name: 'WatchConnectivity'},
-                            { name: 'Notificações Push'},
-                            { name: 'Swift Package Manager'},
-                            { name: 'CocoaPods'},
-                            { name: 'Arquiteturas Clean, VIPER' }
-
-                        ]
+                        { name: 'UI/Unit Testing' },
+                        { name: 'CI/CD' },
+                        { name: 'Local and Push Notifications' },
+                        { name: 'Widgets in SwiftUI' },
+                        { name: 'WatchConnectivity' },
+                        { name: 'Swift Package Manager' },
+                        { name: 'CocoaPods' },
+                        { name: 'Clean and VIPER Architectures' },
+                        ],
                     },
                     languages: [
-                        { name: 'Português', level: 'Nativo' },
-                        { name: 'Inglês', level: 'Intermediário Avançado' }
+                        { name: 'Português' },
+                        { name: 'Inglês' }
 
                     ],
                     appleStoreProjects: [
                         {
                             title: 'Completeness',
-                            shortDescription: 'App para monitoramento de hábitos e bem estarApp feito para o seu bem-estar: saúde em dia, hábitos sob controle e foco total no que importa, alcance seus objetivos com leveza, motivação e resultados reais.',
+                            shortDescription: 'App para monitoramento de hábitos e bem estarApp feito para melhorar foco e produtividade no dia a dia.',
                             longDescription: 'Este aplicativo foi desenvolvido com foco em performance, escalabilidade e experiência do usuário, adotando a arquitetura MVVM para separar responsabilidades e garantir estados reativos claros entre ViewModels e Views em SwiftUI; a persistência utiliza SwiftData com modelos declarativos e consultas reativas, refletindo automaticamente as alterações nas interfaces; o projeto é estruturado em múltiplos targets para ambientes como staging e produção, além de um target dedicado para watchOS com comunicação eficiente via WatchConnectivity, oferecendo experiências rápidas no Apple Watch, incluindo complicações; os Widgets em SwiftUI fornecem informações essenciais no Home e Lock Screen com timelines inteligentes e design adaptativo; padrões de fábrica (factories) e injeção de dependência centralizam a criação de serviços, repositórios e ViewModels, facilitando a troca de implementações e aumentando a testabilidade; a suíte de UI Tests valida fluxos críticos, acessibilidade, navegação e estados de erro, integrando-se ao pipeline de build para garantir qualidade contínua; operações assíncronas utilizam Swift Concurrency (async/await e atores) para segurança de concorrência e legibilidade, com serviços de rede e sincronização isolados e estratégias de retry e cancelamento; por fim, observabilidade com logs estruturados e foco em acessibilidade (Dynamic Type, VoiceOver e alto contraste) asseguram diagnóstico eficiente, privacidade e uma experiência fluida e inclusiva em todo o ecossistema Apple.',
-                            what: '• Quando você quer criar um novo hábito \n• Recompensas visuais e feedback imediato após cada conclusão.\n• Métrica de "completeness" para mostrar o quanto falta até 100%.\n• Painéis com gráficos semanais e mensais (tendência, consistência, aderência).\n• Widgets em SwiftUI no Home/Lock Screen com ações rápidas (marcar hábito, ver progresso).\n•  Interface no Apple Watch para checar e concluir hábitos em segundos.\n• Ações rápidas por notificações (marcar como feito, adiar, registrar nota).\n• sincronização entre iPhone e Apple WatchOS\n• Sessões rápidas no WatchOS com foco em "tocar e concluir".\n• Modo offline com reconciliação automática quando a conexão volta.\n• Quando precisa de consistência e organização\n• Agenda de hábitos com calendário e visão de checklist do dia.\n\n• Lembretes com notificações\n',
+                            what: '• Criação de hábitos personalizados e sugestões inteligentes com conforme sua necessidade.\n• Recompensas visuais e feedback instantâneo a cada conquista.\n• Métrica de "completeness" que mostra o progresso até 100%.\n• Gráficos semanais e mensais para acompanhar consistência e evolução.\n• Widgets em SwiftUI na Tela Inicial e Bloqueio para ações rápidas (marcar, revisar, acompanhar).\n• Interface otimizada no Apple Watch para concluir hábitos em segundos.\n• Notificações interativas com ações rápidas (concluir, adiar, adicionar nota).\n• Sincronização em tempo real entre iPhone e Apple Watch.\n• Sessões rápidas no watchOS com foco em praticidade e fluidez.\n• Modo offline com atualização automática ao reconectar.\n• Agenda de hábitos com calendário e checklist diário.\n• Lembretes inteligentes que se adaptam à sua rotina.\n• Feito para quem busca consistência, equilíbrio e progresso contínuo.\n',
                             image: 'images/Completeness.png',
                             links: [
                             { url: 'https://github.com/GustavoFBassani/Completeness', label: 'Ver no GitHub', icon: 'github' },
                             { url: 'https://apps.apple.com/br/app/completeness/id6752423274?l=en-GBCompleteness', label: 'Ver na Apple Store', icon: 'fa-brands fa-apple'},
 
                             ],
-                            tools: ['SwiftUI', 'CloudKit', 'WatchOS', 'Widgets', 'Swift Concurrency', 'MVVM', 'SwiftData', 'Testes'],
+                            tools: ['SwiftUI', 'CloudKit', 'CI/CD','Localizable','WatchOS', 'Widgets', 'Swift Concurrency', 'MVVM', 'SwiftData', 'Testes', 'Scrum'],
                             mainTools: ['SwiftUI', 'WatchOS', 'Widgets', 'MVVM'],
                             screenshots: [
                                 'images/Completeness-1.png',
@@ -419,10 +511,9 @@
                     featuredProjects: [
                         {
                             title: 'Freela-OnTap',
-                            shortDescription: 'Freela OnTap é uma plataforma que conecta empresas e profissionais de forma rápida, simples e sob demanda. Precisa de um designer, programador ou redator? Com o Freela OnTap, você encontra o talento certo no momento certo, sem burocracia, sem espera, apenas resultado.',
-                            longDescription: 'Freela OnTap é um aplicativo desenvolvido em UIKit com arquitetura MVC, projetado para conectar freelancers e contratantes de maneira ágil e intuitiva. O projeto adota boas práticas de desenvolvimento, com SwiftLint garantindo a padronização e legibilidade do código. \nO backend utiliza CloudKit, explorando containers públicos para o armazenamento e sincronização de dados entre usuários, garantindo uma experiência fluida e integrada ao ecossistema Apple. A estrutura do app foi pensada para oferecer tratamento robusto de erros, com feedbacks claros ao usuário e logs organizados para depuração eficiente. Além disso, o projeto prioriza modularidade e escalabilidade, separando responsabilidades entre controladores, modelos e serviços de rede. O resultado é um código limpo, de fácil manutenção e preparado para evoluir com novas funcionalidades, mantendo o foco em performance, segurança e usabilidade.',
-                            what: 'Gerencia catálogo, carrinho, pagamentos e painel administrativo para lojistas.',
-                            image: 'images/FreelaOnTap.png',
+                            shortDescription: 'Freela OnTap é uma plataforma que conecta empresas e profissionais de forma rápida, simples e sob demanda.',
+                            longDescription: '     Freela OnTap é um aplicativo desenvolvido em UIKit com arquitetura MVC, projetado para conectar freelancers de bares e restaurantes e contratantes de maneira ágil e intuitiva. O projeto adota boas práticas de desenvolvimento, com SwiftLint garantindo a padronização e legibilidade do código. \nO backend utiliza CloudKit, explorando containers públicos para o armazenamento e sincronização de dados entre usuários, garantindo uma experiência fluida e integrada ao ecossistema Apple. A estrutura do app foi pensada para oferecer tratamento robusto de erros, com feedbacks claros ao usuário e logs organizados para depuração eficiente. Além disso, o projeto prioriza escalabilidade, separando responsabilidades entre controladores, modelos e serviços de rede. O resultado é um código limpo, de fácil manutenção e preparado para evoluir com novas funcionalidades, mantendo o foco em performance, segurança e usabilidade.',
+                            what: '• Conecta freelancers e clientes de forma rápida e direta.\n• Criação de perfis detalhados com portfólio e habilidades.\n• Sistema de propostas com status em tempo real.\n• Filtros inteligentes para encontrar projetos alinhados ao seu perfil.\n• Histórico completo de contratos, avaliações e feedbacks.\n• Design focado em simplicidade, clareza e produtividade.\n• Ideal para quem vive do freelancing e quer tudo em um só lugar.\n',                            image: 'images/FreelaOnTap.png',
                             links: [
                                 { url: 'https://github.com/seuusuario/projeto1', label: 'Ver no GitHub', icon: 'github' }
                             ],
@@ -474,7 +565,23 @@
                     ]
                 }
             },
+            computed: {
+                currentExperience() {
+                    return this.currentLang === 'pt' ? this.experiencePt : this.experienceEn;
+                },
+                currentEducation() {
+                    return this.currentLang === 'pt' ? this.educationPt : this.educationEn;
+                }
+            },
             methods: {
+                t(key) {
+                    return this.translations[this.currentLang][key] || key;
+                },
+                toggleLanguage() {
+                    this.currentLang = this.currentLang === 'pt' ? 'en' : 'pt';
+                    localStorage.setItem('lang', this.currentLang);
+                    document.documentElement.lang = this.currentLang === 'pt' ? 'pt-BR' : 'en';
+                },
                 openModal(modalName) {
                     this.activeModal = modalName;
                     document.body.style.overflow = 'hidden';
