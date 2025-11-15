@@ -119,8 +119,21 @@ body {
 
 .contact-info {
     display: flex;
-    gap: 25px;
     flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.contact-info .contact-item:nth-child(1),
+.contact-info .contact-item:nth-child(2),
+.contact-info .contact-item:nth-child(3) {
+    flex: 0 1 auto;
+}
+
+.contact-info .contact-item:nth-child(4),
+.contact-info .contact-item:nth-child(5) {
+    flex: 0 1 auto;
+    margin-top: 15px;
 }
 
 .contact-item {
@@ -377,14 +390,16 @@ body {
     border-radius: 15px;
     transition: all 0.3s ease;
     border: 2px solid #b3cde8;
+    margin-bottom: 18px;
 }
-
 
 .skill-category-title {
     font-size: 1.2em;
     font-weight: 600;
     color: #0b3b8a;
     margin-bottom: 15px;
+    margin-bottom: 6px;
+    font-weight: 600;
 }
 
 .skill-item {
@@ -416,6 +431,23 @@ body {
 
 @keyframes fillBar {
     from { width: 0; }
+}
+
+/* Skill Badges */
+.skill-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.skill-badge {
+    background: linear-gradient(135deg, #0b3b8a, #1a5bb8);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(11, 59, 138, 0.2);
 }
 
 /* Projects */
@@ -608,6 +640,64 @@ body {
 .language-level {
     font-size: 1em;
     color: #666;
+    font-weight: 500;
+}
+
+/* Languages Section */
+.languages-section {
+    margin-top: 3rem;
+    padding: 2rem 0;
+}
+
+.languages-section .section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.languages-section .languages-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.languages-section .language-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+    cursor: default;
+    pointer-events: none;
+}
+
+.language-flag {
+    font-size: 2rem;
+    line-height: 1;
+    user-select: none;
+}
+
+.language-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    user-select: none;
+}
+
+.languages-section .language-name {
+    font-size: 1rem;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.languages-section .language-level {
+    font-size: 0.875rem;
+    color: #6b7280;
     font-weight: 500;
 }
 
@@ -1031,6 +1121,10 @@ body {
     .cta-buttons {
         flex-direction: column;
     }
+
+    .contact-row {
+        flex-wrap: wrap;
+    }
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -1039,4 +1133,91 @@ body {
 
 .fade-enter-from, .fade-leave-to {
     opacity: 0;
+}
+
+/* Experience Section */
+.experience-section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a5bb8;
+    margin: 1.5rem 0 1rem;
+}
+
+.experience-divider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    margin: 2rem 0;
+    border-radius: 2px;
+}
+
+/* Contact Info Overrides */
+.header .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1rem;
+}
+
+.contact-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.header .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.contact-item a {
+    color: #1a5bb8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s, background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #ffffff;
+    border: 2px solid #1a5bb8;
+    box-shadow: 0 2px 4px rgba(26, 91, 184, 0.15);
+    display: flex;
+    align-items: center;
+}
+
+.contact-item a:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #1a5bb8, #0b3b8a);
+    border-color: #0b3b8a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 91, 184, 0.35);
+}
+
+.contact-item .editable {
+    margin-left: 8px;
+}
+
+/* Header Content Overrides */
+.header .header-content {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    text-align: left;
+}
+
+.header .profile-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header .profile-section .profile-image {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
 }
