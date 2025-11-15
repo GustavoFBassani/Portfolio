@@ -31,6 +31,18 @@
                 </div>
 
                 <div class="section">
+                    <h2 class="section-title">{{ t('screenshots') }}</h2>
+                    <div class="screenshots-grid">
+                        <div v-if="!project.screenshots || project.screenshots.length === 0" class="screenshot">
+                            <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=Sem+Screenshots" :alt="t('noScreenshots')">
+                        </div>
+                        <div v-for="(img, idx) in project.screenshots" :key="idx" class="screenshot">
+                            <img :src="img" :alt="`Screenshot ${idx + 1}`">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
                     <h2 class="section-title">{{ t('whatAppDoes') }}</h2>
                     <p class="description">{{ (currentLang === 'pt' ? project.what : project.whatEn) || t('noFunctionalDescription') }}</p>
                 </div>
@@ -42,18 +54,6 @@
                         <span v-for="(tool, idx) in project.tools" :key="idx" class="project-tag">
                             {{ tool }}
                         </span>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <h2 class="section-title">{{ t('screenshots') }}</h2>
-                    <div class="screenshots-grid">
-                        <div v-if="!project.screenshots || project.screenshots.length === 0" class="screenshot">
-                            <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=Sem+Screenshots" :alt="t('noScreenshots')">
-                        </div>
-                        <div v-for="(img, idx) in project.screenshots" :key="idx" class="screenshot">
-                            <img :src="img" :alt="`Screenshot ${idx + 1}`">
-                        </div>
                     </div>
                 </div>
 
@@ -218,4 +218,3 @@
     </script>
 </body>
 </html>
-``` 
