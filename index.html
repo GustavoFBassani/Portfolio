@@ -24,23 +24,23 @@
                         <h1>{{ profile.name }}</h1>
                         <div class="subtitle">{{ t(profile.title) }}</div>
                         
-                        <!-- Linha 1: Informações de Contato -->
+                        <!-- Contato -->
                         <div class="contact">
                             <div class="contact-item">
                                 <span class="material-icons">email</span>
-                                <span :contenteditable="editMode" @blur="updateField('profile', 'email', $event)">{{ profile.email }}</span>
+                                <span>{{ profile.email }}</span>
                             </div>
                             <div class="contact-item">
                                 <span class="material-icons">phone</span>
-                                <span :contenteditable="editMode" @blur="updateField('profile', 'phone', $event)">{{ profile.phone }}</span>
+                                <span>{{ profile.phone }}</span>
                             </div>
                             <div class="contact-item">
                                 <span class="material-icons">place</span>
-                                <span :contenteditable="editMode" @blur="updateField('profile', 'location', $event)">{{ profile.location }}</span>
+                                <span>{{ profile.location }}</span>
                             </div>
                         </div>
 
-                        <!-- Linha 2: Links Sociais (com margem reduzida para ficar agrupado visualmente) -->
+                        <!-- Redes Sociais -->
                         <div class="contact" style="margin-top: 10px;">
                             <div class="contact-item">
                                 <a href="https://www.linkedin.com/in/gustavofbassani//" target="_blank">
@@ -158,7 +158,7 @@
             </main>
         </div>
 
-        <!-- Modals -->
+        <!-- Modais -->
         <div v-if="activeModal" class="modal-overlay" @click="closeModal">
             <div class="modal" @click.stop>
                 <button class="close-btn" @click="closeModal">

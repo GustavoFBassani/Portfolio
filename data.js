@@ -1,5 +1,5 @@
-// Este arquivo contém apenas os dados e textos do site.
-// Facilita a manutenção e alteração de textos sem quebrar o código.
+// Centraliza todo o conteúdo do site (textos, projetos, traduções).
+// Assim a gente não mistura dados com a lógica dos componentes.
 
 const PORTFOLIO_DATA = {
     translations: {
@@ -82,6 +82,7 @@ const PORTFOLIO_DATA = {
     },
     appleStoreProjects: [
         {
+            id: 'completeness',
             title: 'Completeness',
             shortDescription: 'App para monitoramento de hábitos e bem estar feito para melhorar foco e produtividade no dia a dia.',
             shortDescriptionEn: 'Habit tracking and wellness app designed to improve focus and daily productivity.',
@@ -101,6 +102,7 @@ const PORTFOLIO_DATA = {
     ],
     featuredProjects: [
         {
+            id: 'freela-ontap',
             title: 'Freela-OnTap',
             shortDescription: 'Freela OnTap é uma plataforma que conecta empresas e profissionais de forma rápida, simples e sob demanda.',
             shortDescriptionEn: 'Freela OnTap is a platform that connects companies and professionals quickly, simply and on-demand.',
@@ -117,6 +119,7 @@ const PORTFOLIO_DATA = {
             screenshots: ['images/FreelaOnTap-1.png', 'images/FreelaOnTap-2.png', 'images/FreelaOnTap-3.png']
         },
         {
+            id: 'expensshare',
             title: 'Expensshare',
             shortDescription: 'App para controlar despesas domésticas com interface simples.',
             shortDescriptionEn: 'App to control household expenses with a simple interface.',
@@ -136,6 +139,7 @@ const PORTFOLIO_DATA = {
     ],
     otherProjects: [
         {
+            id: 'api-challenge',
             title: 'API-Challenge',
             shortDescription: 'marketplace feito com API pública para fins de estudos .',
             shortDescriptionEn: 'Marketplace built with a public API for study purposes.',
@@ -152,6 +156,7 @@ const PORTFOLIO_DATA = {
             screenshots: ['images/apiChallenge-1.png', 'images/apiChallenge-2.png', 'images/apiChallenge-3.png']
         },
         {
+            id: 'trivia-game',
             title: 'Trivia Game',
             shortDescription: 'Jogo de terminal que busca perguntas via API e testa seus conhecimentos em tempo real.',
             shortDescriptionEn: 'Terminal-based quiz game that fetches questions from an API and tests your knowledge in real time.',

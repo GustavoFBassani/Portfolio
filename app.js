@@ -3,10 +3,10 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            // Carrega os dados do arquivo data.js
+            // Traz tudo do data.js pra cá
             ...PORTFOLIO_DATA,
             
-            // Estado da aplicação (UI)
+            // Controle de UI
             editMode: false,
             activeModal: null,
             currentLang: localStorage.getItem('lang') || 'pt',
@@ -37,26 +37,9 @@ createApp({
             this.activeModal = null;
             document.body.style.overflow = 'auto';
         },
-        updateField(section, field, event) {
-            const newValue = event.target.innerText.trim();
-            if (field) {
-                this[section][field] = newValue;
-            }
-        },
         getProjectLink(project) {
-            const params = new URLSearchParams({
-                title: project.title,
-                image: project.image,
-                links: JSON.stringify(project.links || []),
-                screenshots: JSON.stringify(project.screenshots || []),
-                short: project.shortDescription || '',
-                long: project.longDescription || '',
-                longEn: project.longDescriptionEn || '',
-                what: project.what || '',
-                whatEn: project.whatEn || '',
-                tools: JSON.stringify(project.tools || [])
-            });
-            return `projeto.html?${params.toString()}`;
+            // Manda pro detalhe usando só o ID
+            return `projeto.html?id=${project.id}`;
         }
     }
 }).mount('#app');

@@ -17,7 +17,8 @@
             {{ t('backToResume') }}
         </a>
 
-        <div class="container">
+        <!-- Só mostra o conteúdo se carregou o projeto -->
+        <div class="container" v-if="project">
             <div class="hero" :style="{ backgroundImage: `url(${project.image})` }">
                 <h1>{{ project.title }}</h1>
             </div>
