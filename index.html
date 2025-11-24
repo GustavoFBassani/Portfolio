@@ -12,217 +12,186 @@
 <body>
     <div id="app">
         <div class="container">
-            <div class="header">
-                <button @click="toggleLanguage" class="language-toggle" :title="currentLang === 'pt' ? 'Switch to English' : 'Mudar para Português'">
-                    <span class="flag-icon">{{ currentLang === 'pt' ? '🇺🇸' : '🇧🇷' }}</span>
-                    <span class="lang-text">{{ currentLang === 'pt' ? 'EN' : 'PT' }}</span>
+            <header>
+                <button @click="toggleLanguage" class="lang-btn" :title="currentLang === 'pt' ? 'Switch to English' : 'Mudar para Português'">
+                    <span class="flag">{{ currentLang === 'pt' ? '🇺🇸' : '🇧🇷' }}</span>
+                    <span>{{ currentLang === 'pt' ? 'EN' : 'PT' }}</span>
                 </button>
-                <div class="header-content">
-                    <div class="profile-section">
-                        <img :src="profile.photo" alt="Foto de perfil" class="profile-image">
-                        <div class="profile-info">
-                            <h1>{{ profile.name }}</h1>
-                            <div class="subtitle">{{ t(profile.title) }}</div>
-                        </div>
-                    </div>
-                    <div class="contact-info">
-                        <div class="contact-row-centered">
+                
+                <div class="profile">
+                    <img :src="profile.photo" alt="Foto de perfil">
+                    <div>
+                        <h1>{{ profile.name }}</h1>
+                        <div class="subtitle">{{ t(profile.title) }}</div>
+                        
+                        <!-- Linha 1: Informações de Contato -->
+                        <div class="contact">
                             <div class="contact-item">
-                                <span class="material-icons" style="font-size: 20px;">email</span>
-                                <span :contenteditable="editMode" @blur="updateField('profile', 'email', $event)" class="editable">
-                                    {{ profile.email }}
-                                </span>
+                                <span class="material-icons">email</span>
+                                <span :contenteditable="editMode" @blur="updateField('profile', 'email', $event)">{{ profile.email }}</span>
                             </div>
                             <div class="contact-item">
-                                <span class="material-icons" style="font-size: 20px;">phone</span>
-                                <span :contenteditable="editMode" @blur="updateField('profile', 'phone', $event)" class="editable">
-                                    {{ profile.phone }}
-                                </span>
+                                <span class="material-icons">phone</span>
+                                <span :contenteditable="editMode" @blur="updateField('profile', 'phone', $event)">{{ profile.phone }}</span>
                             </div>
                             <div class="contact-item">
-                                <span class="material-icons" style="font-size: 20px;">place</span>
-                                <span :contenteditable="editMode" @blur="updateField('profile', 'location', $event)" class="editable">
-                                    {{ profile.location }}
-                                </span>
+                                <span class="material-icons">place</span>
+                                <span :contenteditable="editMode" @blur="updateField('profile', 'location', $event)">{{ profile.location }}</span>
                             </div>
                         </div>
-                        <div class="contact-row-centered">
+
+                        <!-- Linha 2: Links Sociais (com margem reduzida para ficar agrupado visualmente) -->
+                        <div class="contact" style="margin-top: 10px;">
                             <div class="contact-item">
                                 <a href="https://www.linkedin.com/in/gustavofbassani//" target="_blank">
-                                    <span class="material-icons" style="font-size: 20px;">link</span>
-                                    <span class="editable">LinkedIn</span>
+                                    <span class="material-icons">link</span> LinkedIn
                                 </a>
                             </div>
                             <div class="contact-item">
                                 <a href="https://github.com/GustavoFBassani" target="_blank">
-                                    <span class="material-icons" style="font-size: 20px;">code</span>
-                                    <span class="editable">GitHub</span>
+                                    <span class="material-icons">code</span> GitHub
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </header>
 
-            <div class="content">
-                <div class="info-buttons-section">
-                    <button @click="openModal('about')" class="info-button">
-                        <span class="material-icons">person</span>
-                        {{ t('aboutMe') }}
+            <main>
+                <nav class="actions">
+                    <button @click="openModal('about')" class="btn">
+                        <span class="material-icons">person</span> {{ t('aboutMe') }}
                     </button>
-                    <button @click="openModal('experience')" class="info-button">
-                        <span class="material-icons">work</span>
-                        {{ t('professionalExperience') }}
+                    <button @click="openModal('experience')" class="btn">
+                        <span class="material-icons">work</span> {{ t('professionalExperience') }}
                     </button>
-                    <button @click="openModal('education')" class="info-button">
-                        <span class="material-icons">school</span>
-                        {{ t('academicEducation') }}
+                    <button @click="openModal('education')" class="btn">
+                        <span class="material-icons">school</span> {{ t('academicEducation') }}
                     </button>
-                </div>
+                </nav>
 
-                <div class="section">
-                    <h2 class="section-title">{{ t('appleStoreProjects') }}</h2>
-                    <div class="projects-grid">
-                        <a v-for="(project, index) in appleStoreProjects"
-                           :key="index"
-                           :href="getProjectLink(project)"
-                           class="project-card">
-                            <div class="project-image" :style="{ backgroundImage: `url(${project.image})` }">
-                                <div class="project-overlay">
-                                    <span class="material-icons project-icon">link</span>
-                                </div>
+                <section>
+                    <h2>{{ t('appleStoreProjects') }}</h2>
+                    <div class="grid">
+                        <a v-for="(project, index) in appleStoreProjects" :key="index" :href="getProjectLink(project)" class="card">
+                            <div class="card-img" :style="{ backgroundImage: `url(${project.image})` }">
+                                <div class="overlay"><span class="material-icons">link</span></div>
                             </div>
-                            <div class="project-content">
-                                <h3 class="project-title">{{ project.title }}</h3>
-                                <p class="project-description">{{ currentLang === 'pt' ? project.shortDescription : project.shortDescriptionEn }}</p>
-                                <div class="project-main-tools" v-if="project.mainTools && project.mainTools.length > 0">
-                                    <span v-for="tool in project.mainTools" :key="tool" class="main-tool-tag">{{ tool }}</span>
+                            <div class="card-body">
+                                <h3>{{ project.title }}</h3>
+                                <p>{{ currentLang === 'pt' ? project.shortDescription : project.shortDescriptionEn }}</p>
+                                <div class="tags" v-if="project.mainTools">
+                                    <span v-for="tool in project.mainTools" :key="tool" class="tag">{{ tool }}</span>
                                 </div>
                             </div>
                         </a>
                     </div>
-                </div>
+                </section>
 
-                <div class="section">
-                    <h2 class="section-title">{{ t('featuredProjects') }}</h2>
-                    <div class="projects-grid">
-                        <a v-for="(project, index) in featuredProjects"
-                           :key="index"
-                           :href="getProjectLink(project)"
-                           class="project-card">
-                            <div class="project-image" :style="{ backgroundImage: `url(${project.image})` }">
-                                <div class="project-overlay">
-                                    <span class="material-icons project-icon">link</span>
-                                </div>
+                <section>
+                    <h2>{{ t('featuredProjects') }}</h2>
+                    <div class="grid">
+                        <a v-for="(project, index) in featuredProjects" :key="index" :href="getProjectLink(project)" class="card">
+                            <div class="card-img" :style="{ backgroundImage: `url(${project.image})` }">
+                                <div class="overlay"><span class="material-icons">link</span></div>
                             </div>
-                            <div class="project-content">
-                                <h3 class="project-title">{{ project.title }}</h3>
-                                <p class="project-description">{{ currentLang === 'pt' ? project.shortDescription : project.shortDescriptionEn }}</p>
-                                <div class="project-main-tools" v-if="project.mainTools && project.mainTools.length > 0">
-                                    <span v-for="tool in project.mainTools" :key="tool" class="main-tool-tag">{{ tool }}</span>
+                            <div class="card-body">
+                                <h3>{{ project.title }}</h3>
+                                <p>{{ currentLang === 'pt' ? project.shortDescription : project.shortDescriptionEn }}</p>
+                                <div class="tags" v-if="project.mainTools">
+                                    <span v-for="tool in project.mainTools" :key="tool" class="tag">{{ tool }}</span>
                                 </div>
                             </div>
                         </a>
                     </div>
-                </div>
+                </section>
 
-                <div class="section">
-                    <h2 class="section-title">{{ t('otherProjects') }}</h2>
-                    <div class="projects-grid">
-                        <a v-for="(project, index) in otherProjects"
-                           :key="index"
-                           :href="getProjectLink(project)"
-                           class="project-card">
-                            <div class="project-image" :style="{ backgroundImage: `url(${project.image})` }">
-                                <div class="project-overlay">
-                                    <span class="material-icons project-icon">link</span>
-                                </div>
+                <section>
+                    <h2>{{ t('otherProjects') }}</h2>
+                    <div class="grid">
+                        <a v-for="(project, index) in otherProjects" :key="index" :href="getProjectLink(project)" class="card">
+                            <div class="card-img" :style="{ backgroundImage: `url(${project.image})` }">
+                                <div class="overlay"><span class="material-icons">link</span></div>
                             </div>
-                            <div class="project-content">
-                                <h3 class="project-title">{{ project.title }}</h3>
-                                <p class="project-description">{{ currentLang === 'pt' ? project.shortDescription : project.shortDescriptionEn }}</p>
-                                <div class="project-main-tools" v-if="project.mainTools && project.mainTools.length > 0">
-                                    <span v-for="tool in project.mainTools" :key="tool" class="main-tool-tag">{{ tool }}</span>
+                            <div class="card-body">
+                                <h3>{{ project.title }}</h3>
+                                <p>{{ currentLang === 'pt' ? project.shortDescription : project.shortDescriptionEn }}</p>
+                                <div class="tags" v-if="project.mainTools">
+                                    <span v-for="tool in project.mainTools" :key="tool" class="tag">{{ tool }}</span>
                                 </div>
                             </div>
                         </a>
                     </div>
-                </div>
+                </section>
 
-                <div class="section">
-                    <h2 class="section-title">{{ t('technicalSkills') }}</h2>
-                    <div class="skills-grid">
-                        <div v-for="(category, catName) in skills" :key="catName" class="skill-category">
-                            <h3 class="skill-category-title">{{ t(catName) }}</h3>
-                            <div class="skill-badges">
-                                <span v-for="skill in category" :key="skill.name" class="skill-badge">
-                                    {{ skill.name }}
-                                </span>
+                <section>
+                    <h2>{{ t('technicalSkills') }}</h2>
+                    <div class="grid">
+                        <div v-for="(category, catName) in skills" :key="catName" class="skill-group">
+                            <h3>{{ t(catName) }}</h3>
+                            <div class="tags">
+                                <span v-for="skill in category" :key="skill.name" class="tag">{{ skill.name }}</span>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="section languages-section">
-                    <h2 class="section-title">{{ t('languages') }}</h2>
-                    <div class="languages-grid">
-                        <div class="language-card">
-                            <div class="language-flag">🇧🇷</div>
-                            <div class="language-info">
-                                <div class="language-name">Português</div>
-                                <div class="language-level">{{ t('Nativo') }}</div>
+                <section>
+                    <h2>{{ t('languages') }}</h2>
+                    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                        <div class="lang-card">
+                            <div class="lang-flag">🇧🇷</div>
+                            <div>
+                                <strong>Português</strong>
+                                <div>{{ t('Nativo') }}</div>
                             </div>
                         </div>
-                        <div class="language-card">
-                            <div class="language-flag">🇺🇸</div>
-                            <div class="language-info">
-                                <div class="language-name">English</div>
-                                <div class="language-level">{{ t('Intermediário') }}</div>
+                        <div class="lang-card">
+                            <div class="lang-flag">🇺🇸</div>
+                            <div>
+                                <strong>English</strong>
+                                <div>{{ t('Intermediário') }}</div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </section>
+            </main>
         </div>
 
+        <!-- Modals -->
         <div v-if="activeModal" class="modal-overlay" @click="closeModal">
-            <div class="modal-content" @click.stop>
-                <button class="modal-close" @click="closeModal">
+            <div class="modal" @click.stop>
+                <button class="close-btn" @click="closeModal">
                     <span class="material-icons">close</span>
                 </button>
 
-                <div v-if="activeModal === 'about'" class="modal-body">
-                    <h2 class="modal-title">{{ t('aboutMe') }}</h2>
-                    <p class="about-text">{{ t('aboutText') }}</p>
+                <div v-if="activeModal === 'about'">
+                    <h2>{{ t('aboutMe') }}</h2>
+                    <p style="line-height: 1.8; margin-top: 20px;">{{ t('aboutText') }}</p>
                 </div>
 
-                <div v-if="activeModal === 'experience'" class="modal-body">
-                    <h2 class="modal-title">{{ t('professionalExperience') }}</h2>
-                    <div class="timeline">
+                <div v-if="activeModal === 'experience'">
+                    <h2>{{ t('professionalExperience') }}</h2>
+                    <div style="margin-top: 30px;">
                         <template v-for="(section, sectionIndex) in currentExperience" :key="sectionIndex">
-                            <h3 class="experience-section-title">{{ section.section }}</h3>
+                            <h3 style="margin-bottom: 20px; color: #666;">{{ section.section }}</h3>
                             <div v-for="(exp, index) in section.items" :key="index" class="timeline-item">
-                                <div class="timeline-content">
-                                    <div class="timeline-position">{{ exp.position }}</div>
-                                    <div class="timeline-period">{{ exp.period }}</div>
-                                    <div class="timeline-company">{{ exp.company }} — {{ exp.location }}</div>
-                                    <div class="timeline-description">{{ exp.description }}</div>
-                                </div>
+                                <div class="timeline-title">{{ exp.position }}</div>
+                                <div class="timeline-date">{{ exp.period }}</div>
+                                <div>{{ exp.company }} — {{ exp.location }}</div>
+                                <p style="margin-top: 10px;">{{ exp.description }}</p>
                             </div>
-                            <hr v-if="sectionIndex < currentExperience.length - 1" class="experience-divider">
                         </template>
                     </div>
                 </div>
 
-                <div v-if="activeModal === 'education'" class="modal-body">
-                    <h2 class="modal-title">{{ t('academicEducation') }}</h2>
-                    <div class="timeline">
+                <div v-if="activeModal === 'education'">
+                    <h2>{{ t('academicEducation') }}</h2>
+                    <div style="margin-top: 30px;">
                         <div v-for="(edu, index) in currentEducation" :key="index" class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-position">{{ edu.degree }}</div>
-                                <div class="timeline-period">{{ edu.period }}</div>
-                                <div class="timeline-company">{{ edu.institution }}</div>
-                            </div>
+                            <div class="timeline-title">{{ edu.degree }}</div>
+                            <div class="timeline-date">{{ edu.period }}</div>
+                            <div>{{ edu.institution }}</div>
                         </div>
                     </div>
                 </div>
@@ -230,7 +199,6 @@
         </div>
     </div>
 
-    <!-- Scripts organizados -->
     <script src="data.js"></script>
     <script src="app.js"></script>
 </body>
