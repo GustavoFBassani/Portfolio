@@ -49,8 +49,8 @@
 
                 <div class="section">
                     <h2 class="section-title">{{ t('mainTools') }}</h2>
-                    <div class="project-tags tools-tags">
-                        <span v-if="!project.tools || project.tools.length === 0" class="tool-item">{{ t('noToolsSpecified') }}</span>
+                    <div class="project-tags">
+                        <span v-if="!project.tools || project.tools.length === 0">{{ t('noToolsSpecified') }}</span>
                         <span v-for="(tool, idx) in project.tools" :key="idx" class="project-tag">
                             {{ tool }}
                         </span>
