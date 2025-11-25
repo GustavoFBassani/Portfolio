@@ -18,7 +18,9 @@ const PORTFOLIO_DATA = {
             'Conhecimento em desenvolvimento': 'Conhecimento em desenvolvimento',
             'Nativo': 'Nativo',
             'Intermediário': 'Intermediário',
-            aboutText: `Lecionei matemática por 10 anos...`,
+            aboutText: `Desenvolvedor iOS em formação, com uma trajetória única que combina 10 anos de experiência no ensino de matemática com uma forte paixão por tecnologia. Inicialmente mudei-me para Porto Alegre para cursar Engenharia Metalúrgica, mas encontrei na educação matemática uma forma de unir trabalho e paixão, lecionando desde então. A partir dessa vivência, desenvolvi interesse por tecnologia como ferramenta de aprendizado e pela lógica de programação, o que me motivou a direcionar minha carreira para o desenvolvimento de software.
+
+Atualmente sou bolsista da Apple Developer Academy, onde desenvolvo projetos para o ecossistema iOS com foco em Swift, SwiftUI, UIKit e arquitetura de software. Paralelamente, curso Tecnologia em Sistemas para Internet no IFRS, aprofundando conhecimentos em algoritmos, estruturas de dados e programação orientada a objetos. Meu objetivo é unir minha base analítica desenvolvida na matemática à criação de soluções tecnológicas inovadoras e impactantes.`,
             backToResume: 'Voltar ao Currículo',
             aboutProject: 'Sobre o Projeto',
             whatAppDoes: 'O que o app faz',
@@ -52,7 +54,9 @@ const PORTFOLIO_DATA = {
             'Conhecimento em desenvolvimento': 'Knowledge under development',
             'Nativo': 'Native',
             'Intermediário': 'Intermediate',
-            aboutText: `I taught mathematics for 10 years...`,
+            aboutText: `iOS Developer in training, with a unique trajectory combining 10 years of experience in mathematics teaching with a strong passion for technology. Initially moved to Porto Alegre to study Metallurgical Engineering, but found in mathematics education a way to unite work and passion, teaching ever since. From this experience, I developed an interest in technology as a learning tool and programming logic, which motivated me to steer my career towards software development.
+
+Currently, I am a scholarship holder at the Apple Developer Academy, where I develop projects for the iOS ecosystem focusing on Swift, SwiftUI, UIKit, and software architecture. In parallel, I am studying Internet Systems Technology at IFRS, deepening knowledge in algorithms, data structures, and object-oriented programming. My goal is to unite my analytical base developed in mathematics with the creation of innovative and impactful technological solutions.`,
             backToResume: 'Back to Resume',
             aboutProject: 'About the Project',
             whatAppDoes: 'What the app does',
@@ -223,28 +227,94 @@ const PORTFOLIO_DATA = {
     experience: {
         pt: [
             {
-                section: 'Experiência Profissional',
+                section: 'Desenvolvimento de Software',
                 items: [
                     {
-                        position: 'Desenvolvedor iOS',
-                        company: 'Empresa X',
+                        position: 'Bolsista - Apple Developer Academy',
+                        company: 'PUCRS',
                         location: 'Porto Alegre, RS',
-                        period: '2023 - Atual',
-                        description: 'Desenvolvimento de aplicativos iOS nativos.'
+                        period: 'Jan 2025 – Presente',
+                        description: 'Desenvolvimento de aplicações iOS utilizando Swift, SwiftUI e UIKit, aplicando metodologias ágeis (Scrum) em projetos colaborativos. Participação em code reviews, pair programming e desafios de inovação. Foco em arquitetura de software moderna (MVC, MVVM), design patterns e desenvolvimento de soluções com impacto social.'
+                    }
+                ]
+            },
+            {
+                section: 'Educação',
+                items: [
+                    {
+                        position: 'Professor de Matemática',
+                        company: 'Curso Meta',
+                        location: 'Porto Alegre, RS',
+                        period: '2021 – 2024',
+                        description: 'Aulas voltadas à preparação para o vestibular da UFRGS, com foco em teoria, resolução de problemas e revisão estratégica. Desenvolvimento do raciocínio lógico e de técnicas de resolução.'
+                    },
+                    {
+                        position: 'Professor de Matemática',
+                        company: 'Universitário',
+                        location: 'Porto Alegre, RS',
+                        period: '2021 – 2024',
+                        description: 'Ensino de matemática para ensino médio e preparação para vestibulares (UFRGS e ENEM). Também atuei como professor particular, desenvolvendo materiais personalizados e estratégias de ensino.'
+                    },
+                    {
+                        position: 'Professor de Matemática',
+                        company: 'AlphaHelp',
+                        location: 'Porto Alegre, RS',
+                        period: '2016 – 2019',
+                        description: 'Aulas particulares de matemática com foco em preparação individualizada para UFRGS e ENEM.'
+                    },
+                    {
+                        position: 'Professor de Matemática',
+                        company: 'EducaMed & PEAC',
+                        location: 'Porto Alegre, RS',
+                        period: '2013 – 2016',
+                        description: 'Atuação em cursos populares voltados à inclusão educacional e democratização do acesso ao ensino superior. Aulas preparatórias para ENEM e vestibulares.'
                     }
                 ]
             }
         ],
         en: [
             {
-                section: 'Professional Experience',
+                section: 'Software Development',
                 items: [
                     {
-                        position: 'iOS Developer',
-                        company: 'Company X',
+                        position: 'Scholarship Holder - Apple Developer Academy',
+                        company: 'PUCRS',
                         location: 'Porto Alegre, RS',
-                        period: '2023 - Present',
-                        description: 'Native iOS app development.'
+                        period: 'Jan 2025 – Present',
+                        description: 'Development of iOS applications using Swift, SwiftUI, and UIKit, applying agile methodologies (Scrum) in collaborative projects. Participation in code reviews, pair programming, and innovation challenges. Focus on modern software architecture (MVC, MVVM), design patterns, and development of solutions with social impact.'
+                    }
+                ]
+            },
+            {
+                section: 'Education',
+                items: [
+                    {
+                        position: 'Mathematics Teacher',
+                        company: 'Curso Meta',
+                        location: 'Porto Alegre, RS',
+                        period: '2021 – 2024',
+                        description: 'Classes aimed at preparation for the UFRGS entrance exam, focusing on theory, problem-solving, and strategic review. Development of logical reasoning and resolution techniques.'
+                    },
+                    {
+                        position: 'Mathematics Teacher',
+                        company: 'Universitário',
+                        location: 'Porto Alegre, RS',
+                        period: '2021 – 2024',
+                        description: 'Mathematics teaching for high school and entrance exam preparation (UFRGS and ENEM). Also acted as a private tutor, developing personalized materials and teaching strategies.'
+                    },
+                    {
+                        position: 'Mathematics Teacher',
+                        company: 'AlphaHelp',
+                        location: 'Porto Alegre, RS',
+                        period: '2016 – 2019',
+                        description: 'Private mathematics lessons focusing on individualized preparation for UFRGS and ENEM.'
+                    },
+                    {
+                        position: 'Mathematics Teacher',
+                        company: 'EducaMed & PEAC',
+                        location: 'Porto Alegre, RS',
+                        period: '2013 – 2016',
+                        description: 'Acting in popular courses aimed at educational inclusion and democratization of access to higher education. Preparatory classes for ENEM and entrance exams.'
                     }
                 ]
             }
@@ -253,16 +323,30 @@ const PORTFOLIO_DATA = {
     education: {
         pt: [
             {
-                degree: 'Bacharelado em Ciência da Computação',
-                institution: 'Universidade X',
-                period: '2015 - 2019'
+                degree: 'Tecnologia em Sistemas para Internet',
+                institution: 'IFRS – Instituto Federal do Rio Grande do Sul',
+                period: '2025 – Presente',
+                description: 'Foco em algoritmos, estruturas de dados, programação orientada a objetos, desenvolvimento web e banco de dados.'
+            },
+            {
+                degree: 'Licenciatura em Matemática',
+                institution: 'UFRGS – Universidade Federal do Rio Grande do Sul',
+                period: '2018 – 2022',
+                description: 'Formação completa em matemática com ênfase em didática e raciocínio lógico.'
             }
         ],
         en: [
             {
-                degree: 'Bachelor in Computer Science',
-                institution: 'University X',
-                period: '2015 - 2019'
+                degree: 'Technology in Internet Systems',
+                institution: 'IFRS – Federal Institute of Rio Grande do Sul',
+                period: '2025 – Present',
+                description: 'Focus on algorithms, data structures, object-oriented programming, web development, and databases.'
+            },
+            {
+                degree: 'Degree in Mathematics',
+                institution: 'UFRGS – Federal University of Rio Grande do Sul',
+                period: '2018 – 2022',
+                description: 'Complete training in mathematics with emphasis on didactics and logical reasoning.'
             }
         ]
     }
