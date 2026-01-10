@@ -73,6 +73,13 @@
                 <section>
                     <h2>{{ t('appleStoreProjects') }}</h2>
                     <div class="grid">
+                        <!-- 
+                            COMO FUNCIONA:
+                            1. A função getProjectLink(project) é chamada passando o objeto do projeto atual.
+                            2. Ela retorna a URL (ex: 'https://github.com/...').
+                            3. O :href recebe essa URL.
+                            4. A tag <a> faz o navegador abrir essa página ao clicar.
+                        -->
                         <a v-for="(project, index) in appleStoreProjects" :key="index" :href="getProjectLink(project)" class="card">
                             <div class="card-img" :style="{ backgroundImage: `url(${project.image})` }">
                                 <div class="overlay"><span class="material-icons">link</span></div>

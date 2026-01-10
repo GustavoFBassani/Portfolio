@@ -102,7 +102,26 @@ Currently, I am a scholarship holder at the Apple Developer Academy, where I dev
             tools: ['SwiftUI', 'CloudKit', 'CI/CD', 'Localizable', 'WatchOS', 'Widgets', 'Swift Concurrency', 'MVVM', 'SwiftData', 'Testes', 'Scrum'],
             mainTools: ['SwiftUI', 'WatchOS', 'Widgets', 'MVVM'],
             screenshots: ['images/Completeness-1.png', 'images/Completeness-2.png', 'images/Completeness-3.png']
+        },
+        {
+            id: 'nikki-journal',
+            title: 'Nikki Journal',
+            shortDescription: 'App de journal com temática japonesa que explora narrativa pessoal, reflexão e elementos 3D imersivos.',
+            shortDescriptionEn: 'A journaling app with Japanese aesthetics focused on personal reflection and immersive 3D elements.',
+            longDescription: 'O Nikki Journal foi desenvolvido com foco em experiência sensorial, clareza emocional e organização do pensamento, utilizando SwiftUI e arquitetura MVVM para manter uma separação clara de responsabilidades entre Views e ViewModels; a aplicação explora conceitos tridimensionais por meio de RealityKit e Reality Composer, utilizando objetos 3D como elementos narrativos e simbólicos que reforçam o significado das entradas do journal; a persistência de dados é feita com SwiftData, permitindo modelos declarativos e atualizações reativas da interface conforme o usuário escreve ou revisita seus registros; o projeto prioriza simplicidade estrutural e legibilidade de código, com uso consciente de Swift Concurrency (async/await) para operações assíncronas futuras; o Nikki Journal busca transformar o ato de escrever em um momento de pausa, contemplação e presença, unindo tecnologia, design minimalista japonês e narrativa pessoal.',
+            longDescriptionEn: 'Nikki Journal was developed with a focus on sensory experience, emotional clarity and structured reflection, using SwiftUI and the MVVM architecture to ensure a clear separation of responsibilities between Views and ViewModels. The app explores three-dimensional concepts through RealityKit and Reality Composer, using 3D objects as narrative and symbolic elements that reinforce the meaning of journal entries. Data persistence is handled with SwiftData, enabling declarative models and reactive UI updates as users write or revisit their records. The project emphasizes code clarity and structural simplicity, with conscious use of Swift Concurrency (async/await) for future asynchronous operations. Nikki Journal aims to transform journaling into a moment of pause and contemplation, blending technology, minimalist Japanese design and personal storytelling.',
+            what: '• Escrita livre de entradas de journal focadas em reflexão pessoal.\n• Ambientação inspirada na estética japonesa, com design minimalista e simbólico.\n• Elementos 3D integrados à experiência como metáforas visuais e narrativas.\n• Objetos interativos criados no Reality Composer para reforçar emoções e intenções.\n• Organização clara das entradas para leitura e revisitação.\n• Experiência tranquila, sem distrações, pensada para momentos de pausa.\n• Base arquitetural preparada para evolução futura do app.',
+            whatEn: '• Free-form journaling focused on personal reflection.\n• Japanese-inspired aesthetics with minimalist and symbolic design.\n• Integrated 3D elements used as visual and narrative metaphors.\n• Interactive objects created with Reality Composer to reinforce emotions and intentions.\n• Clear organization of entries for easy reading and revisiting.\n• Calm, distraction-free experience designed for moments of pause.\n• Architectural foundation prepared for future expansion.',
+            image: 'images/NikkiJournal.png',
+            links: [
+                { url: 'https://github.com/GustavoFBassani/Nikki', label: 'Ver no GitHub', labelEn: 'View on GitHub', icon: 'github' },
+                { url: 'https://apps.apple.com/br/app/nikki-journal/id6756323938?l=en-GB Nikki Journal', label: 'Ver na Apple Store', labelEn: 'View on App Store', icon: 'apple' }
+            ],
+            tools: ['SwiftUI', 'RealityKit', 'Reality Composer', 'SwiftData', 'MVVM', 'Swift Concurrency', 'Localizable'],
+            mainTools: ['SwiftUI', 'RealityKit', 'Reality Composer', 'MVVM'],
+            screenshots: ['images/Nikki-1.png', 'images/Nikki-2.png', 'images/Nikki-3.png']
         }
+        
     ],
     featuredProjects: [
         {
