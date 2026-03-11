@@ -10,33 +10,26 @@
 </head>
 <body>
     <div id="app">
-        <!-- Botão pra voltar pra home-->
-        <a href="index.html" class="back-btn">
-            &larr; {{ t('backToResume') }}
-        </a>
-
-        <!-- Só carrega o resto se achou o projeto -->
         <div class="container" v-if="project">
-            <!-- Capa do projeto com a imagem de fundo -->
             <div class="hero" :style="{ backgroundImage: `url(${project.image})` }">
+                <a href="index.html" class="back-btn">
+                    &larr; {{ t('backToResume') }}
+                </a>
                 <h1>{{ project.title }}</h1>
             </div>
 
             <main>
                 <section>
                     <h2>{{ t('aboutProject') }}</h2>
-                    <!-- Trocando o texto dependendo se tá em PT ou EN -->
                     <p class="description">{{ project.longDescription }}</p>
                 </section>
 
                 <section>
                     <h2>{{ t('screenshots') }}</h2>
                     <div class="grid">
-                        <!-- Se esqueceu de por print, mostra um placeholder pra não ficar feio -->
                         <div v-if="!project.screenshots || project.screenshots.length === 0" class="screenshot">
                             <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=No+Screenshots" :alt="t('noScreenshots')">
                         </div>
-                        <!-- Loop pra mostrar todas as imagens -->
                         <div v-for="(img, idx) in project.screenshots" :key="idx" class="screenshot">
                             <img :src="img" :alt="`Screenshot ${idx + 1}`">
                         </div>
@@ -52,14 +45,12 @@
                     <h2>{{ t('mainTools') }}</h2>
                     <div class="tags">
                         <span v-if="!project.tools || project.tools.length === 0">{{ t('noToolsSpecified') }}</span>
-                        <!-- Lista das ferramentas usadas -->
                         <span v-for="(tool, idx) in project.tools" :key="idx" class="tag">
                             {{ tool }}
                         </span>
                     </div>
                 </section>
 
-                <!-- Chamada pra ação no final da página -->
                 <div class="cta">
                     <h2>{{ t('interestedInProject') }}</h2>
                     <p style="opacity: 0.9; margin-top: 10px;">{{ t('checkSourceCode') }}</p>
