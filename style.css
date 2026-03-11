@@ -22,7 +22,7 @@ body {
 
 /* Layout & Containers */
 .container {
-    background: var(--surface);
+    background: var(--bg);
     border-radius: 0;
     box-shadow: none;
     overflow: visible;
@@ -36,10 +36,12 @@ body {
 
 /* Header */
 header {
-    background: url('images/fundoPNG.png') center bottom / cover no-repeat;
-    color: white;
+    background: var(--bg);
+    color: var(--text);
     padding: 20px 40px;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .lang-btn {
@@ -65,13 +67,13 @@ header {
     border: 3px solid white;
     object-fit: cover;
 }
-.profile h1 { font-size: 1.3em; line-height: 1.2; margin-bottom: 2px; }
-.profile .subtitle { opacity: 0.9; font-size: 0.8em; font-weight: 300; }
+.profile h1 { font-size: 1.3em; line-height: 1.2; margin-bottom: 2px; color: var(--primary); }
+.profile .subtitle { opacity: 0.9; font-size: 0.8em; font-weight: 300; color: var(--text); }
 
 .contact { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 10px; }
 .contact-item { display: flex; align-items: center; gap: 5px; font-size: 0.78em; }
 .contact-item a { 
-    color: white; text-decoration: none; display: flex; align-items: center; gap: 4px;
+    color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 4px;
 }
 
 /* Main Content */
