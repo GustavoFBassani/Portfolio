@@ -3,19 +3,17 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            currentLang: localStorage.getItem('lang') || 'pt',
+            currentLang: 'en',
             translations: PORTFOLIO_DATA.translations,
-            project: null // Carrega no mounted
+            project: null
         }
     },
     mounted() {
-        document.documentElement.lang = this.currentLang === 'pt' ? 'pt-BR' : 'en';
-        
-        // Pega o ID da URL pra saber qual projeto carregar
+        document.documentElement.lang = 'en';
+
         const params = new URLSearchParams(window.location.search);
         const projectId = params.get('id');
 
-        // Junta todas as listas pra facilitar a busca
         const allProjects = [
             ...PORTFOLIO_DATA.appleStoreProjects,
             ...PORTFOLIO_DATA.featuredProjects,
@@ -27,21 +25,12 @@ createApp({
         if (foundProject) {
             this.project = foundProject;
         } else {
-            // Se o ID for inválido ou não existir, volta pra home
             window.location.href = 'index.html';
         }
-
-        // Sincroniza idioma entre abas
-        window.addEventListener('storage', (e) => {
-            if (e.key === 'lang' && e.newValue) {
-                this.currentLang = e.newValue;
-                document.documentElement.lang = this.currentLang === 'pt' ? 'pt-BR' : 'en';
-            }
-        });
     },
     methods: {
         t(key) {
-            return this.translations[this.currentLang][key] || key;
+            return this.translations[key] || key;
         }
     }
 }).mount('#app');

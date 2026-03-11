@@ -3,31 +3,23 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            // Traz tudo do data.js pra cá
             ...PORTFOLIO_DATA,
-            
-            // Controle de UI
             editMode: false,
             activeModal: null,
-            currentLang: localStorage.getItem('lang') || 'pt',
+            currentLang: 'en',
         }
     },
     computed: {
         currentExperience() {
-            return this.experience[this.currentLang] || this.experience.pt;
+            return this.experience;
         },
         currentEducation() {
-            return this.education[this.currentLang] || this.education.pt;
+            return this.education;
         }
     },
     methods: {
         t(key) {
-            return this.translations?.[this.currentLang]?.[key] || key;
-        },
-        toggleLanguage() {
-            this.currentLang = this.currentLang === 'pt' ? 'en' : 'pt';
-            localStorage.setItem('lang', this.currentLang);
-            document.documentElement.lang = this.currentLang === 'pt' ? 'pt-BR' : 'en';
+            return this.translations?.[key] || key;
         },
         openModal(modalName) {
             this.activeModal = modalName;
@@ -38,7 +30,6 @@ createApp({
             document.body.style.overflow = 'auto';
         },
         getProjectLink(project) {
-            // Manda pro detalhe usando só o ID
             return `projeto.html?id=${project.id}`;
         }
     }
