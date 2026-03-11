@@ -18,24 +18,11 @@
                     <div>
                         <h1>{{ profile.name }}</h1>
                         <div class="subtitle">{{ t(profile.title) }}</div>
-                        
-                        <!-- Contato -->
                         <div class="contact">
-                            <div class="contact-item">
-                                <span class="material-icons">email</span>
-                                <span>{{ profile.email }}</span>
-                            </div>
-                            <div class="contact-item">
-                                <span class="material-icons">phone</span>
-                                <span>{{ profile.phone }}</span>
-                            </div>
-                            <div class="contact-item">
-                                <span class="material-icons">place</span>
-                                <span>{{ profile.location }}</span>
-                            </div>
+                            <div class="contact-item"><span class="material-icons">email</span><span>{{ profile.email }}</span></div>
+                            <div class="contact-item"><span class="material-icons">phone</span><span>{{ profile.phone }}</span></div>
+                            <div class="contact-item"><span class="material-icons">place</span><span>{{ profile.location }}</span></div>
                         </div>
-
-                        <!-- Redes Sociais -->
                         <div class="contact" style="margin-top: 10px;">
                             <div class="contact-item">
                                 <a href="https://www.linkedin.com/in/gustavofbassani//" target="_blank">
@@ -120,9 +107,6 @@
                         </div>
                     </section>
                 </div>
-
-                <!-- Technical Skills e Languages removidos -->
-
             </main>
         </div>
 
@@ -154,7 +138,7 @@
                     </div>
                 </div>
 
-                <div v-if="activeModal === 'education'"></div>
+                <div v-if="activeModal === 'education'">
                     <h2>{{ t('academicEducation') }}</h2>
                     <div style="margin-top: 30px;">
                         <div v-for="(edu, index) in currentEducation" :key="index" class="timeline-item">
