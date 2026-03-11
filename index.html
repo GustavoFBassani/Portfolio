@@ -47,7 +47,7 @@
             <main>
                 <div class="projects-block">
                     <section>
-                        <h2>{{ t('appleStoreProjects') }}</h2>
+                        <div class="section-title"><span>{{ t('appleStoreProjects') }}</span></div>
                         <div class="grid">
                             <a v-for="(project, index) in appleStoreProjects" :key="index" :href="getProjectLink(project)" class="card">
                                 <div class="card-img" :style="{ backgroundImage: `url(${project.image})` }">
@@ -64,7 +64,7 @@
                     </section>
 
                     <section>
-                        <h2>{{ t('featuredProjects') }}</h2>
+                        <div class="section-title"><span>{{ t('featuredProjects') }}</span></div>
                         <div class="grid">
                             <a v-for="(project, index) in featuredProjects" :key="index" :href="getProjectLink(project)" class="card">
                                 <div class="card-img" :style="{ backgroundImage: `url(${project.image})` }">
@@ -81,7 +81,7 @@
                     </section>
 
                     <section>
-                        <h2>{{ t('otherProjects') }}</h2>
+                        <div class="section-title"><span>{{ t('otherProjects') }}</span></div>
                         <div class="grid">
                             <a v-for="(project, index) in otherProjects" :key="index" :href="getProjectLink(project)" class="card">
                                 <div class="card-img" :style="{ backgroundImage: `url(${project.image})` }">
