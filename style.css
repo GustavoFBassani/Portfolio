@@ -129,13 +129,16 @@ section h2 { color: var(--primary); margin-bottom: 10px; font-size: 1.3em; }
 
 .card-img {
     width: 70px;
-    height: auto;
-    min-height: 70px;
+    height: 70px;
+    min-height: unset;
     flex-shrink: 0;
     background-size: cover;
     background-position: center;
     background-color: #f0f0f0;
     position: relative;
+    align-self: center;
+    margin: 8px;
+    border-radius: 8px;
 }
 .card-img .overlay {
     position: absolute; inset: 0;
