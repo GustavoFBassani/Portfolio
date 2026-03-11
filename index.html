@@ -20,8 +20,6 @@
                         <div class="subtitle">{{ t(profile.title) }}</div>
                         <div class="contact">
                             <div class="contact-item"><span class="material-icons">email</span><span>{{ profile.email }}</span></div>
-                            <div class="contact-item"><span class="material-icons">phone</span><span>{{ profile.phone }}</span></div>
-                            <div class="contact-item"><span class="material-icons">place</span><span>{{ profile.location }}</span></div>
                         </div>
                         <div class="contact" style="margin-top: 10px;">
                             <div class="contact-item">
@@ -34,24 +32,19 @@
                                     <span class="material-icons">code</span> GitHub
                                 </a>
                             </div>
+                            <div class="contact-item">
+                                <a href="#" @click.prevent="openModal('about')" class="about-link">
+                                    <span class="material-icons">person</span> About Me
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </header>
 
-            <main>
-                <nav class="actions">
-                    <button @click="openModal('about')" class="btn">
-                        <span class="material-icons">person</span> {{ t('aboutMe') }}
-                    </button>
-                    <button @click="openModal('experience')" class="btn">
-                        <span class="material-icons">work</span> {{ t('professionalExperience') }}
-                    </button>
-                    <button @click="openModal('education')" class="btn">
-                        <span class="material-icons">school</span> {{ t('academicEducation') }}
-                    </button>
-                </nav>
+            <hr class="divider">
 
+            <main>
                 <div class="projects-block">
                     <section>
                         <h2>{{ t('appleStoreProjects') }}</h2>
@@ -120,9 +113,9 @@
                 <div v-if="activeModal === 'about'">
                     <h2>{{ t('aboutMe') }}</h2>
                     <p style="line-height: 1.8; margin-top: 20px;">{{ t('aboutText') }}</p>
-                </div>
 
-                <div v-if="activeModal === 'experience'">
+                    <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
                     <h2>{{ t('professionalExperience') }}</h2>
                     <div style="margin-top: 30px;">
                         <template v-for="(section, sectionIndex) in currentExperience" :key="sectionIndex">
@@ -136,9 +129,9 @@
                             </div>
                         </template>
                     </div>
-                </div>
 
-                <div v-if="activeModal === 'education'">
+                    <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
                     <h2>{{ t('academicEducation') }}</h2>
                     <div style="margin-top: 30px;">
                         <div v-for="(edu, index) in currentEducation" :key="index" class="timeline-item">

@@ -32,12 +32,11 @@ Currently, I am a scholarship holder at the Apple Developer Academy, where I dev
     },
     profile: {
         name: 'Gustavo Ferreira Bassani',
-        title: 'Desenvolvedor iOS Mobile',
+        title: 'Welcome to my iOS Development Portfolio',
         email: 'gustavo_fbassani@hotmail.com',
-        phone: '(51) 99764-5781',
-        location: 'Porto Alegre, RS',
         photo: 'images/perfil.png'
     },
+
     appleStoreProjects: [
         {
             id: 'completeness',

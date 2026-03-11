@@ -62,7 +62,7 @@ header {
 
 .profile { display: flex; gap: 14px; align-items: center; }
 .profile img {
-    width: 60px; height: 60px;
+    width: 135px; height: 135px;
     border-radius: 50%;
     border: 3px solid white;
     object-fit: cover;
@@ -74,6 +74,15 @@ header {
 .contact-item { display: flex; align-items: center; gap: 5px; font-size: 0.78em; }
 .contact-item a { 
     color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 4px;
+}
+
+.about-link {
+    color: var(--primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
 }
 
 /* Main Content */
@@ -140,7 +149,7 @@ section h2 { color: var(--primary); margin-bottom: 10px; font-size: 1.3em; }
     position: relative;
     align-self: center;
     margin: 8px;
-    border-radius: 8px;
+    border-radius: 20px;
 }
 .card-img .overlay {
     position: absolute; inset: 0;
@@ -302,4 +311,11 @@ section h2 { color: var(--primary); margin-bottom: 10px; font-size: 1.3em; }
     .grid { grid-template-columns: repeat(2, 1fr); }
     header, main { padding: 20px; }
     .hero h1 { font-size: 2em; }
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #c8c8c8;
+    margin: 0;
+    width: 100%;
 }
