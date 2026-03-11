@@ -153,18 +153,6 @@ section h2 { color: var(--primary); margin-bottom: 20px; font-size: 2em; }
     font-size: 0.8em;
 }
 
-/* Skills Specifics */
-.skill-group { background: #f8f9fa; padding: 25px; border-radius: 15px; border: 1px solid #ddd; }
-.skill-group h3 { color: var(--primary); margin-bottom: 15px; }
-
-/* Languages */
-.lang-card {
-    background: #f8f9fa; padding: 20px; border-radius: 15px;
-    display: flex; align-items: center; gap: 15px;
-    border: 1px solid #eee;
-}
-.lang-flag { font-size: 2em; }
-
 /* Modal */
 .modal-overlay {
     position: fixed; inset: 0;

@@ -9,14 +9,6 @@ const PORTFOLIO_DATA = {
         appleStoreProjects: 'Apple Store Projects',
         featuredProjects: 'Featured Projects',
         otherProjects: 'Other Projects',
-        technicalSkills: 'Technical Skills',
-        languages: 'Languages',
-        'Desenvolvedor iOS Mobile': 'iOS Mobile Developer',
-        'Experiência sólida com:': 'Strong experience with:',
-        'Boa familiaridade': 'Good familiarity',
-        'Conhecimento em desenvolvimento': 'Knowledge under development',
-        'Nativo': 'Native',
-        'Intermediário': 'Intermediate',
         aboutText: `iOS Developer in training, with a unique trajectory combining 10 years of experience in mathematics teaching with a strong passion for technology. Initially moved to Porto Alegre to study Metallurgical Engineering, but found in mathematics education a way to unite work and passion, teaching ever since. From this experience, I developed an interest in technology as a learning tool and programming logic, which motivated me to steer my career towards software development.
 
 Currently, I am a scholarship holder at the Apple Developer Academy, where I develop projects for the iOS ecosystem focusing on Swift, SwiftUI, UIKit, and software architecture. In parallel, I am studying Internet Systems Technology at IFRS, deepening knowledge in algorithms, data structures, and object-oriented programming. My goal is to unite my analytical base developed in mathematics with the creation of innovative and impactful technological solutions.`,
@@ -138,53 +130,6 @@ Currently, I am a scholarship holder at the Apple Developer Academy, where I dev
             mainTools: ['Swift', 'Terminal App'],
             screenshots: []
         },
-    ],
-    skills: {
-        'Experiência sólida com:': [
-            { name: 'Swift' },
-            { name: 'UIKit' },
-            { name: 'SwiftUI' },
-            { name: 'CoreData' },
-            { name: 'SwiftData' },
-            { name: 'Git/GitHub' },
-            { name: 'MVC' },
-            { name: 'MVVM' },
-            { name: 'Factory' },
-            { name: 'Singleton' },
-            { name: 'Responsive Design' },
-            { name: 'Figma' },
-        ],
-        'Boa familiaridade': [
-            { name: 'CloudKit' },
-            { name: 'Scrum/Agile' },
-            { name: 'Concurrency' },
-            { name: '(async/await, DispatchQueue)' },
-            { name: 'Memory Management' },
-            { name: 'Dependency Injection' },
-            { name: 'Design Patterns' },
-            { name: 'Unit and UI Testing' },
-            { name: 'Apple WatchOS Development' },
-            { name: 'Accessibility' },
-            { name: 'Lifecycle in UIKit and SwiftUI' },
-            { name: 'Property Wrappers' },
-            { name: 'Localization and Internationalization' },
-            { name: 'RESTful APIs' },
-            { name: 'Error Handling (try/throws)' },
-        ],
-        'Conhecimento em desenvolvimento': [
-            { name: 'UI/Unit Testing' },
-            { name: 'CI/CD' },
-            { name: 'Local and Push Notifications' },
-            { name: 'Widgets in SwiftUI' },
-            { name: 'WatchConnectivity' },
-            { name: 'Swift Package Manager' },
-            { name: 'CocoaPods' },
-            { name: 'Clean and VIPER Architectures' },
-        ],
-    },
-    languages: [
-        { name: 'Portuguese', flag: '🇧🇷', level: 'Native' },
-        { name: 'English', flag: '🇺🇸', level: 'Intermediate' }
     ],
     experience: [
         {

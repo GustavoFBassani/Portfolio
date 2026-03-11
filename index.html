@@ -67,7 +67,6 @@
 
                 <div class="projects-block">
                     <section>
-                        <div class="section-label">🍎 Apple Store</div>
                         <h2>{{ t('appleStoreProjects') }}</h2>
                         <div class="grid">
                             <a v-for="(project, index) in appleStoreProjects" :key="index" :href="getProjectLink(project)" class="card">
@@ -86,7 +85,6 @@
                     </section>
 
                     <section>
-                        <div class="section-label">⭐ Featured</div>
                         <h2>{{ t('featuredProjects') }}</h2>
                         <div class="grid">
                             <a v-for="(project, index) in featuredProjects" :key="index" :href="getProjectLink(project)" class="card">
@@ -105,7 +103,6 @@
                     </section>
 
                     <section>
-                        <div class="section-label">📁 Other</div>
                         <h2>{{ t('otherProjects') }}</h2>
                         <div class="grid">
                             <a v-for="(project, index) in otherProjects" :key="index" :href="getProjectLink(project)" class="card">
@@ -124,37 +121,8 @@
                     </section>
                 </div>
 
-                <section>
-                    <h2>{{ t('technicalSkills') }}</h2>
-                    <div class="grid">
-                        <div v-for="(category, catName) in skills" :key="catName" class="skill-group">
-                            <h3>{{ t(catName) }}</h3>
-                            <div class="tags">
-                                <span v-for="skill in category" :key="skill.name" class="tag">{{ skill.name }}</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <!-- Technical Skills e Languages removidos -->
 
-                <section>
-                    <h2>{{ t('languages') }}</h2>
-                    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-                        <div class="lang-card">
-                            <div class="lang-flag">🇧🇷</div>
-                            <div>
-                                <strong>Português</strong>
-                                <div>{{ t('Nativo') }}</div>
-                            </div>
-                        </div>
-                        <div class="lang-card">
-                            <div class="lang-flag">🇺🇸</div>
-                            <div>
-                                <strong>English</strong>
-                                <div>{{ t('Intermediário') }}</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
             </main>
         </div>
 
@@ -176,7 +144,7 @@
                         <template v-for="(section, sectionIndex) in currentExperience" :key="sectionIndex">
                             <hr v-if="sectionIndex > 0" style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
                             <h3 style="margin-bottom: 20px; color: #666;">{{ section.section }}</h3>
-                            <div v-for="(exp, index) in section.items" :key="index" class="timeline-item"></div>
+                            <div v-for="(exp, index) in section.items" :key="index" class="timeline-item">
                                 <div class="timeline-title">{{ exp.position }}</div>
                                 <div class="timeline-date">{{ exp.period }}</div>
                                 <div>{{ exp.company }} — {{ exp.location }}</div>
@@ -186,7 +154,7 @@
                     </div>
                 </div>
 
-                <div v-if="activeModal === 'education'">
+                <div v-if="activeModal === 'education'"></div>
                     <h2>{{ t('academicEducation') }}</h2>
                     <div style="margin-top: 30px;">
                         <div v-for="(edu, index) in currentEducation" :key="index" class="timeline-item">
