@@ -32,7 +32,7 @@ Currently, I am a scholarship holder at the Apple Developer Academy, where I dev
     },
     profile: {
         name: 'Gustavo Ferreira Bassani',
-        title: 'Welcome to my iOS Development Portfolio',
+        title: 'Welcome to my iOS Development Portfolio!',
         email: 'gustavo_fbassani@hotmail.com',
         photo: 'images/perfil.png'
     },
@@ -41,7 +41,7 @@ Currently, I am a scholarship holder at the Apple Developer Academy, where I dev
         {
             id: 'completeness',
             title: 'Completeness',
-            shortDescription: 'Habit tracking and wellness app designed to improve focus and daily productivity.',
+            shortDescription: 'Habit tracking app to improve focus and daily productivity.',
             longDescription: 'This application was developed with a focus on performance, scalability and user experience, adopting the MVVM architecture to separate responsibilities and ensure clear reactive states between ViewModels and Views in SwiftUI. Persistence uses SwiftData with declarative models and reactive queries, automatically reflecting interface changes. The project is structured in multiple targets for staging and production environments, plus a dedicated target for watchOS with efficient WatchConnectivity communication, offering fast Apple Watch experiences including complications. SwiftUI Widgets provide essential information on Home and Lock Screen with intelligent timelines and adaptive design. Factory patterns and dependency injection centralize service, repository and ViewModel creation, facilitating implementation swaps and increasing testability. The UI Tests suite validates critical flows, accessibility, navigation and error states, integrating with the build pipeline for continuous quality. Asynchronous operations use Swift Concurrency (async/await and actors) for concurrency safety and readability. Finally, observability with structured logs and accessibility focus (Dynamic Type, VoiceOver and high contrast) ensure efficient diagnosis, privacy and a fluid, inclusive experience across the Apple ecosystem.',
             what: '• Create custom habits with intelligent suggestions based on your needs.\n• Visual rewards and instant feedback on every achievement.\n• "Completeness" metric showing progress up to 100%.\n• Weekly and monthly charts to track consistency and evolution.\n• SwiftUI Widgets on Home and Lock Screen for quick actions (mark, review, track).\n• Optimized interface on Apple Watch to complete habits in seconds.\n• Interactive notifications with quick actions (complete, defer, add note).\n• Real-time synchronization between iPhone and Apple Watch.\n• Quick sessions on watchOS focused on practicality and fluidity.\n• Offline mode with automatic updates when reconnecting.\n• Habit schedule with calendar and daily checklist.\n• Smart reminders that adapt to your routine.\n• Built for those seeking consistency, balance and continuous progress.',
             image: 'images/Completeness.png',
@@ -56,7 +56,7 @@ Currently, I am a scholarship holder at the Apple Developer Academy, where I dev
         {
             id: 'nikki-journal',
             title: 'Nikki Journal',
-            shortDescription: 'A journaling app with Japanese aesthetics focused on personal reflection and immersive 3D elements.',
+            shortDescription: 'Journaling app with Japanese aesthetics and immersive 3D elements.',
             longDescription: 'Nikki Journal was developed with a focus on sensory experience, emotional clarity and structured reflection, using SwiftUI and the MVVM architecture to ensure a clear separation of responsibilities between Views and ViewModels. The app explores three-dimensional concepts through RealityKit and Reality Composer, using 3D objects as narrative and symbolic elements that reinforce the meaning of journal entries. Data persistence is handled with SwiftData, enabling declarative models and reactive UI updates as users write or revisit their records. The project emphasizes code clarity and structural simplicity, with conscious use of Swift Concurrency (async/await) for future asynchronous operations. Nikki Journal aims to transform journaling into a moment of pause and contemplation, blending technology, minimalist Japanese design and personal storytelling.',
             what: '• Free-form journaling focused on personal reflection.\n• Japanese-inspired aesthetics with minimalist and symbolic design.\n• Integrated 3D elements used as visual and narrative metaphors.\n• Interactive objects created with Reality Composer to reinforce emotions and intentions.\n• Clear organization of entries for easy reading and revisiting.\n• Calm, distraction-free experience designed for moments of pause.\n• Architectural foundation prepared for future expansion.',
             image: 'images/NikkiJournal.png',
@@ -73,7 +73,7 @@ Currently, I am a scholarship holder at the Apple Developer Academy, where I dev
         {
             id: 'freela-ontap',
             title: 'Freela-OnTap',
-            shortDescription: 'Freela OnTap is a platform that connects companies and professionals quickly, simply and on-demand.',
+            shortDescription: 'Platform connecting companies and freelancers on-demand.',
             longDescription: 'Freela OnTap is an application developed in UIKit with MVC architecture, designed to connect freelancers from bars and restaurants with contractors in an agile and intuitive way. The project adopts good development practices, with SwiftLint ensuring code standardization and readability. The backend uses CloudKit, exploring public containers for data storage and synchronization between users, ensuring a fluid experience integrated with the Apple ecosystem. The app structure was designed to offer robust error handling with clear user feedback and organized logs for efficient debugging. Additionally, the project prioritizes scalability, separating responsibilities between controllers, models and network services. The result is clean, easy-to-maintain code ready to evolve with new features while maintaining focus on performance, security and usability.',
             what: '• Connects freelancers and clients quickly and directly.\n• Create detailed profiles with portfolio and skills.\n• Proposal system with real-time status.\n• Smart filters to find projects aligned with your profile.\n• Complete history of contracts, ratings and feedback.\n• Design focused on simplicity, clarity and productivity.\n• Ideal for those who make a living from freelancing and want everything in one place.',
             image: 'images/FreelaOnTap.png',
@@ -87,7 +87,7 @@ Currently, I am a scholarship holder at the Apple Developer Academy, where I dev
         {
             id: 'expensshare',
             title: 'Expensshare',
-            shortDescription: 'App to control household expenses with a simple interface.',
+            shortDescription: 'App to split and track household expenses simply.',
             longDescription: 'Expensshare is an application developed for study purposes, created to practice SwiftUI and MV architecture. The app aims to facilitate the administration of household and shared expenses, focusing on simplicity, speed and clarity. It allows groups such as family, friends or housemates to record expenses, indicate who paid, divide amounts fairly and track how much each person owes, all in an intuitive interface designed for everyday use.',
             what: '• Expense registration: record expenses with name, description, amount, date, payer and receipt photo.\n• Division between people: associate expense with who paid and see how the amount impacts each participant\'s balance.\n• Custom categories: organize expenses in categories (ex.: groceries, bills, transportation, leisure) for easy analysis.\n• Reports and insights: track totals by period and category, identify spending patterns and see who contributed most.\n• Local synchronization and performance: data saved efficiently on device with fast loading and smooth navigation.\n• Simple and secure editing: update any expense with a few taps while preserving history and data consistency.\n• Receipt attachments: add photos of receipts to facilitate future verification.',
             image: 'images/expensshare.png',
@@ -104,7 +104,7 @@ Currently, I am a scholarship holder at the Apple Developer Academy, where I dev
         {
             id: 'api-challenge',
             title: 'API-Challenge',
-            shortDescription: 'Marketplace built with a public API for study purposes.',
+            shortDescription: 'Fictional marketplace built with a public API for study.',
             longDescription: 'A fictional marketplace developed for studying API integration. The app simulates a real product environment, allowing you to test different endpoints, handle asynchronous responses, and explore complete flows for requesting, sending, and processing data. The project is structured using MVVM with dependency injection to improve testing and modularity. The entire app is localizable, includes native iOS accessibility features, and was designed to practice best practices in architecture, unit tests, code organization, and user experience.',
             what: '• Simulates a marketplace to practice API consumption.\n• Lists products with name, image, and price fetched through requests.\n• Displays complete item details, such as descriptions and additional information.\n• Allows testing different endpoints and visualizing how the data changes.\n• Supports favoriting and unfavoriting marketplace items.\n• Shows real network states, such as loading, error, and refreshing.\n• Provides a complete experience to practice requests, responses, and data processing.',
             image: 'images/emptyIcon.png',
@@ -118,7 +118,7 @@ Currently, I am a scholarship holder at the Apple Developer Academy, where I dev
         {
             id: 'trivia-game',
             title: 'Trivia Game',
-            shortDescription: 'Terminal-based quiz game that fetches questions from an API and tests your knowledge in real time.',
+            shortDescription: 'Terminal quiz game fetching questions from an API in real time.',
             longDescription: 'Terminal game developed in Swift for study purposes. The app aims to provide a fun and educational experience, allowing users to test their knowledge in various question categories. With a simple and interactive interface, the game challenges players to answer multiple-choice questions, accumulating points as they progress. The project was structured to facilitate the addition of new questions and categories, promoting scalability and code maintenance.',
             what: '• Terminal-based game with multiple-choice questions.\n• Various categories to test different areas of knowledge.\n• Scoring system to track your performance.\n• Simple and interactive interface for easy navigation.\n• Scalable structure for adding new questions and categories.',
             image: 'images/emptyIcon.png',

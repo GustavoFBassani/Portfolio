@@ -139,8 +139,8 @@ section h2 { color: var(--primary); margin-bottom: 10px; font-size: 1.3em; }
 }
 
 .card-img {
-    width: 84px;
-    height: 84px;
+    width: 67px;
+    height: 67px;
     min-height: unset;
     flex-shrink: 0;
     background-size: cover;
@@ -148,8 +148,8 @@ section h2 { color: var(--primary); margin-bottom: 10px; font-size: 1.3em; }
     background-color: #f0f0f0;
     position: relative;
     align-self: center;
-    margin: 8px;
-    border-radius: 20px;
+    margin: 6px;
+    border-radius: 16px;
 }
 .card-img .overlay {
     position: absolute; inset: 0;
@@ -160,7 +160,7 @@ section h2 { color: var(--primary); margin-bottom: 10px; font-size: 1.3em; }
 .card:hover .overlay { opacity: 1; }
 
 .card-body {
-    padding: 8px 12px;
+    padding: 5px 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
