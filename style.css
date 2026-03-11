@@ -260,12 +260,15 @@ section h2 { color: var(--primary); margin-bottom: 10px; font-size: 1.3em; }
 /* Projects block */
 .projects-block {
     margin-bottom: 0;
+    display: block;
     max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.projects-block section { margin-bottom: 12px; }
-.projects-block section h2 { font-size: 1em; margin-bottom: 6px; color: var(--primary); font-weight: 600; }
+.projects-block section { margin-bottom: 16px; }
+.projects-block section h2 { font-size: 1em; margin-bottom: 8px; color: var(--primary); font-weight: 600; }
 
-/* Grid vira coluna única para cards horizontais */
+/* Grid dentro de cada seção vira coluna única */
 .projects-block .grid {
     grid-template-columns: 1fr;
     gap: 6px;
