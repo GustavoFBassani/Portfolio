@@ -50,8 +50,7 @@
                         <div class="section-title"><span>{{ t('appleStoreProjects') }}</span></div>
                         <div class="grid">
                             <a v-for="(project, index) in appleStoreProjects" :key="index" :href="getProjectLink(project)" class="card">
-                                <div class="card-img" :style="{ backgroundImage: `url(${project.image})` }">
-                                </div>
+                                <div class="card-img" :style="{ backgroundImage: `url(${project.image})` }"></div>
                                 <div class="card-body">
                                     <h3>{{ project.title }}</h3>
                                     <p>{{ project.shortDescription }}</p>
@@ -67,8 +66,7 @@
                         <div class="section-title"><span>{{ t('featuredProjects') }}</span></div>
                         <div class="grid">
                             <a v-for="(project, index) in featuredProjects" :key="index" :href="getProjectLink(project)" class="card">
-                                <div class="card-img" :style="{ backgroundImage: `url(${project.image})` }">
-                                </div>
+                                <div class="card-img" :style="{ backgroundImage: `url(${project.image})` }"></div>
                                 <div class="card-body">
                                     <h3>{{ project.title }}</h3>
                                     <p>{{ project.shortDescription }}</p>
@@ -84,8 +82,7 @@
                         <div class="section-title"><span>{{ t('otherProjects') }}</span></div>
                         <div class="grid">
                             <a v-for="(project, index) in otherProjects" :key="index" :href="getProjectLink(project)" class="card">
-                                <div class="card-img" :style="{ backgroundImage: `url(${project.image})` }">
-                                </div>
+                                <div class="card-img" :style="{ backgroundImage: `url(${project.image})` }"></div>
                                 <div class="card-body">
                                     <h3>{{ project.title }}</h3>
                                     <p>{{ project.shortDescription }}</p>
