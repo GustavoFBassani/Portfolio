@@ -98,6 +98,20 @@ Currently, I am a scholarship holder at the Apple Developer Academy, where I dev
             tools: ['SwiftUI', 'SwiftData', 'Figma'],
             mainTools: ['SwiftUI', 'SwiftData', 'MV'],
             screenshots: ['images/expensshare-1.png', 'images/expensshare-2.png', 'images/expensshare-3.png']
+        }, 
+        {
+            id: "before-it-floods",
+            title: "Before It Floods",
+            shortDescription: "Interactive educational experience about flood preparedness and risk awareness.",
+            longDescription: "Before It Floods is an interactive experience created for the Swift Student Challenge with the goal of raising awareness about flood risks and the importance of preparation before extreme weather events. The project combines educational storytelling with simple interactive elements to guide the user through decisions and situations related to flood preparedness. Developed using Swift and Apple’s native frameworks, the project focuses on clarity, accessibility, and user engagement, presenting information through a short narrative flow designed to be easily understood in a few minutes. The app emphasizes environmental awareness and social responsibility, encouraging users to think about preventive actions and safety measures before disasters occur. The codebase was structured with simplicity and readability in mind, prioritizing maintainable architecture and a clear separation between interface and logic.",
+            what: "• Interactive narrative experience about flood preparedness.\n• Educational approach focused on prevention and safety.\n• Short guided flow designed to be completed in a few minutes.\n• Simple decision-based interactions to reinforce learning.\n• Clear visual communication focused on accessibility.\n• Project created specifically for the Swift Student Challenge.\n• Focus on social impact and environmental awareness.",
+            image: "images/BeforeItFlood.png",
+            links: [
+                { "url": "https://github.com/GustavoFBassani/BeforeItFloods", "label": "View on GitHub", "icon": "github" }
+            ],
+            tools: ["Swift", "SwiftUI", "SpriteKit", "Xcode", "User Experience Design", "Educational Design"],
+            mainTools: ["Swift", "SwiftUI", "SpriteKit", "UX Design"],
+            screenshots: ["images/BeforeItFloods-1.png", "images/BeforeItFloods-2.png", "images/BeforeItFloods-3.png"]
         }
     ],
     otherProjects: [
