@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Details</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="app">
         <div class="container" v-if="project">
@@ -24,12 +27,9 @@
                     <p class="description">{{ project.longDescription }}</p>
                 </section>
 
-                <section>
+                <section v-if="project.screenshots && project.screenshots.length > 0">
                     <h2>{{ t('screenshots') }}</h2>
                     <div class="screenshots-grid">
-                        <div v-if="!project.screenshots || project.screenshots.length === 0" class="screenshot">
-                            <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=No+Screenshots" :alt="t('noScreenshots')">
-                        </div>
                         <div v-for="(img, idx) in project.screenshots" :key="idx" class="screenshot">
                             <img :src="img" :alt="`Screenshot ${idx + 1}`">
                         </div>
@@ -55,7 +55,8 @@
                     <h2>{{ t('interestedInProject') }}</h2>
                     <p style="opacity: 0.9; margin-top: 10px;">{{ t('checkSourceCode') }}</p>
                     <div class="cta-buttons">
-                        <a v-for="(link, i) in project.links" :key="i" :href="typeof link === 'string' ? link : (link.url || '#')" target="_blank" class="btn">
+                        <a v-for="(link, i) in project.links" :key="i"
+                            :href="typeof link === 'string' ? link : (link.url || '#')" target="_blank" class="btn">
                             {{ typeof link === 'string' ? t('viewProject') : t(link.label || t('viewProject')) }}
                         </a>
                         <a href="index.html" class="btn secondary">
@@ -70,4 +71,5 @@
     <script src="data.js"></script>
     <script src="project.js"></script>
 </body>
+
 </html>
