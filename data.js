@@ -82,7 +82,7 @@ Currently, I am a scholarship holder at the Apple Developer Academy, where I dev
             ],
             tools: ['UIKit', 'CoreData', 'CloudKit', 'Public Containers', 'MVC', 'SwiftLint', 'Async/Await', 'Error Handling'],
             mainTools: ['UIKit', 'CloudKit', 'MVC'],
-            screenshots: ['images/FreelaOnTap-1.png', 'images/FreelaOnTap-2.png', 'images/FreelaOnTap-3.png']
+            screenshots: ['images/Freelaontap-1.png', 'images/Freelaontap-2.png', 'images/Freelaontap-3.png']
         },
         {
             id: 'expensshare',
