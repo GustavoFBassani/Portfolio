@@ -183,7 +183,7 @@ section h2 { color: var(--primary); margin-bottom: 10px; font-size: 1.3em; }
 
 .tags { 
     display: flex; 
-    flex-wrap: nowrap; 
+    flex-wrap: wrap; /* Permite que as tags quebrem linha */
     gap: 4px; 
     margin-top: 3px; 
     overflow: hidden; 
@@ -265,7 +265,13 @@ section h2 { color: var(--primary); margin-bottom: 10px; font-size: 1.3em; }
 .hero::before {
     content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.5);
 }
-.hero h1 { position: relative; color: white; font-size: 3em; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+.hero h1 { 
+    position: relative; 
+    color: white; 
+    font-size: 3em; 
+    z-index: 1; 
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); 
+}
 
 .hero .back-btn {
     position: relative;
@@ -276,13 +282,18 @@ section h2 { color: var(--primary); margin-bottom: 10px; font-size: 1.3em; }
     color: white;
     border: 1px solid rgba(255,255,255,0.4);
     backdrop-filter: blur(5px);
+    font-size: 1em;
+    padding: 10px 20px;
 }
 
 .description { white-space: pre-wrap; margin-bottom: 30px; text-align: justify; }
 
-.screenshot img { width: 100%; border-radius: 10px; display: block; }
+.screenshot img { 
+    width: 100%; 
+    border-radius: 10px; 
+    display: block; 
+}
 
-/* Screenshots grid — 20% smaller */
 .screenshots-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -364,8 +375,24 @@ section h2 { color: var(--primary); margin-bottom: 10px; font-size: 1.3em; }
     .actions { flex-direction: column; }
     .grid { grid-template-columns: repeat(2, 1fr); }
     header, main { padding: 20px; }
-    .hero h1 { font-size: 2em; }
+    .hero h1 { font-size: 1.8em; }
     .projects-block { grid-template-columns: 1fr; }
+    .screenshots-grid {
+        grid-template-columns: repeat(1, 1fr); /* Mantém 3 colunas */
+        column-gap: 30px;
+    }
+    .screenshot img {
+        width: 60%; /* Reduz o tamanho das imagens em 40% */
+        margin: 0 auto; /* Centraliza as imagens */
+    }
+    .hero h1 {
+        font-size: 1em; /* Reduz o tamanho do título em telas menores */
+    }
+
+    .hero .back-btn {
+        font-size: 0.5em; /* Reduz o tamanho do botão em telas menores */
+        padding: 6px 12px; /* Ajusta o padding do botão */
+    }
 }
 
 .divider {
