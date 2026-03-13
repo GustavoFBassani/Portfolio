@@ -65,7 +65,7 @@ Currently, I am a scholarship holder at the Apple Developer Academy, where I dev
                 { url: 'https://apps.apple.com/br/app/nikki-journal/id6756323938?l=en-GB Nikki Journal', label: 'View on App Store', icon: 'apple' }
             ],
             tools: ['SwiftUI', 'RealityKit', 'Reality Composer', 'SwiftData', 'MVVM', 'Swift Concurrency', 'Localizable'],
-            mainTools: ['SwiftUI', 'RealityKit', 'Reality Composer', 'MVVM'],
+            mainTools: ['SwiftUI', 'RealityKit', 'MVVM'],
             screenshots: ['images/Nikki-1.png', 'images/Nikki-2.png', 'images/Nikki-3.png']
         }
     ],
@@ -98,7 +98,7 @@ Currently, I am a scholarship holder at the Apple Developer Academy, where I dev
             tools: ['SwiftUI', 'SwiftData', 'Figma'],
             mainTools: ['SwiftUI', 'SwiftData', 'MV'],
             screenshots: ['images/expensshare-1.png', 'images/expensshare-2.png', 'images/expensshare-3.png']
-        }, 
+        },
         {
             id: "before-it-floods",
             title: "Before It Floods",
