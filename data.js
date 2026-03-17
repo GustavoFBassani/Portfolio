@@ -97,7 +97,7 @@ Currently, I am a scholarship holder at the Apple Developer Academy, where I dev
             ],
             tools: ['SwiftUI', 'SwiftData', 'Figma'],
             mainTools: ['SwiftUI', 'SwiftData', 'MV'],
-            screenshots: ['images/expensshare-1.png', 'images/expensshare-2.png', 'images/expensshare-3.png']
+            screenshots: ['images/Expensshare-1.png', 'images/Expensshare-2.png', 'images/Expensshare-3.png']
         },
         {
             id: "before-it-floods",
