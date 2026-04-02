@@ -289,7 +289,8 @@ section h2 { color: var(--primary); margin-bottom: 10px; font-size: 1.3em; }
 .description { white-space: pre-wrap; margin-bottom: 30px; text-align: justify; }
 
 .screenshot img { 
-    width: 100%; 
+    width: 70%; 
+    margin: 0 auto;
     border-radius: 10px; 
     display: block; 
 }
