@@ -27,10 +27,17 @@
                     <p class="description">{{ project.longDescription }}</p>
                 </section>
 
+                <section v-if="project.id === 'StarBits'">
+                    <h2>Preview</h2>
+                    <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+                        <video src="images/starbitsVideo.mp4" autoplay loop muted playsinline controls style="width: 98%; max-width: 800px; border-radius: 10px;"></video>
+                    </div>
+                </section>
+
                 <section v-if="project.screenshots && project.screenshots.length > 0">
                     <h2>{{ t('screenshots') }}</h2>
                     <div class="screenshots-grid">
-                        <div v-for="(img, idx) in project.screenshots" :key="idx" class="screenshot">
+                        <div v-for="(img, idx) in project.screenshots" :key="idx" class="screenshot" :class="{'starbits-img': project.id === 'StarBits'}">
                             <img :src="img" :alt="`Screenshot ${idx + 1}`">
                         </div>
                     </div>
