@@ -112,6 +112,20 @@ Currently, I am a scholarship holder at the Apple Developer Academy, where I dev
             tools: ["Swift", "SwiftUI", "SpriteKit", "Xcode", "User Experience Design", "Educational Design"],
             mainTools: ["Swift", "SwiftUI", "SpriteKit", "UX Design"],
             screenshots: ["images/BeforeItFloods-1.png", "images/BeforeItFloods-2.png", "images/BeforeItFloods-3.png"]
+        },
+        {
+            id: "StarBits",
+            title: "StarBits",
+            shortDescription: "A grid-based puzzle game where you guide a fire puffle through ice caves.",
+            longDescription: "StarBits is an engaging grid-based puzzle game developed as a project for the Apple Game Challenge. Inspired by classic mini-games, the player must guide a fire puffle through increasingly complex ice caves without falling into the water. The gameplay revolves around tactical movement, melting ice tiles, pushing rocks to bridge gaps, and using portals to collect stars and reach the objective. Developed entirely with Apple's native frameworks, the app features a seamless combination of SwiftUI for responsive, modern menus (like the world and level selector), and SpriteKit for dynamic 2D mechanics. Local progression is securely managed using SwiftData, allowing players to unlock new worlds based on their performance. The codebase showcases strong architectural skills, employing a modular design that clearly separates game entities, tile management, and movement logic.",
+            what: "• Classic grid-based puzzle mechanics with progressive difficulty.\n• Multiple themed worlds and levels to unlock using collected stars.\n• Interactive elements including pushable rocks, melting ice, and portals.\n• Intuitive custom on-screen D-Pad controls designed for iOS.\n• Seamless integration between SwiftUI interfaces and SpriteKit game scenes.\n• Player progress and unlocked data persisted locally using SwiftData.\n• Clean architecture with isolated manager classes for entities and logic.",
+            image: "images/StarBits.png",
+            links: [
+                { url: "https://github.com/SandlerRodrigo/game-challenge", "label": "View on GitHub", "icon": "github" }
+            ],
+            tools: ["Swift", "SwiftUI", "SpriteKit", "SwiftData", "GameplayKit", "Xcode"],
+            mainTools: ["SwiftUI", "SpriteKit", "SwiftData"],
+            screenshots: ["images/StarBits-1.png", "images/StarBits-2.png", "images/StarBits-3.png"]
         }
     ],
     otherProjects: [
