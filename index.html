@@ -32,8 +32,9 @@
             </button>
         </div>
 
-        <div class="container">
-            <header>
+        <header class="home-hero"
+            :style="{ backgroundImage: currentTheme === 'light' ? `url('images/portfolioHeaderLight.svg')` : `url('images/portfolioHeader.png')` }">
+            <div class="container">
                 <div class="profile-container">
                     <img :src="profile.photo" alt="Profile photo" class="profile-img">
                 </div>
@@ -54,8 +55,10 @@
                         <span class="material-icons">person</span> {{ t('aboutMe') }}
                     </button>
                 </div>
-            </header>
+            </div>
+        </header>
 
+        <div class="container">
             <main>
                 <div class="section">
                     <h2 class="section-title">Projects</h2>
