@@ -1,82 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-18JS5V15L7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-18JS5V15L7');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Details</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div id="app">
-        <div class="container" v-if="project">
-            <div class="hero" :style="{ backgroundImage: `url(${project.image})` }">
-                <a href="index.html" class="back-btn">
-                    &larr;
-                </a>
-                <h1>{{ project.title }}</h1>
+        <div v-if="project">
+            <div class="hero-detail" :style="{ backgroundImage: `url(${project.image})` }">
+                <div class="toolbar-top">
+                    <a href="index.html" class="btn btn-glass">
+                        <span class="material-icons">arrow_back</span>
+                    </a>
+                </div>
+                <div class="hero-content">
+                    <h1>{{ l(project.title) }}</h1>
+                </div>
             </div>
 
-            <main>
-                <section>
+            <main class="detail-main">
+                <section class="detail-section">
                     <h2>{{ t('aboutProject') }}</h2>
-                    <p class="description">{{ project.longDescription }}</p>
+                    <p class="detail-description" style="white-space: pre-wrap;">{{ l(project.longDescription) }}</p>
                 </section>
 
-                <section v-if="project.id === 'StarBits'">
+                <section v-if="project.id === 'StarBits'" class="detail-section">
                     <h2>Preview</h2>
-                    <div style="display: flex; justify-content: center; margin-bottom: 20px;">
-                        <video src="images/starbitsVideo.mp4" autoplay loop muted playsinline controls style="width: 98%; max-width: 800px; border-radius: 10px;"></video>
+                    <div class="video-preview-wrapper">
+                        <video src="images/starbitsVideo.mp4" autoplay loop muted playsinline controls></video>
                     </div>
                 </section>
 
-                <section v-if="project.screenshots && project.screenshots.length > 0">
+                <section v-if="project.screenshots && project.screenshots.length > 0" class="detail-section">
                     <h2>{{ t('screenshots') }}</h2>
-                    <div class="screenshots-grid">
-                        <div v-for="(img, idx) in project.screenshots" :key="idx" class="screenshot" :class="{'starbits-img': project.id === 'StarBits'}">
+                    <div class="screenshots-container">
+                        <div v-for="(img, idx) in project.screenshots" :key="idx" class="screenshot-item" :class="{'starbits-img': project.id === 'StarBits'}">
                             <img :src="img" :alt="`Screenshot ${idx + 1}`">
                         </div>
                     </div>
                 </section>
 
-                <section>
+                <section class="detail-section">
                     <h2>{{ t('whatAppDoes') }}</h2>
-                    <p class="description">{{ project.what || t('noFunctionalDescription') }}</p>
+                    <p class="detail-description" style="white-space: pre-wrap;">{{ l(project.what) || t('noFunctionalDescription') }}</p>
                 </section>
 
-                <section>
+                <section class="detail-section">
                     <h2>{{ t('mainTools') }}</h2>
                     <div class="tags">
                         <span v-if="!project.tools || project.tools.length === 0">{{ t('noToolsSpecified') }}</span>
-                        <span v-for="(tool, idx) in project.tools" :key="idx" class="tag">
+                        <span v-for="(tool, idx) in project.tools" :key="idx" class="tag" style="font-size: 0.95rem; padding: 10px 18px;">
                             {{ tool }}
                         </span>
                     </div>
                 </section>
+            </main>
 
-                <div class="cta">
+            <div class="container">
+                <div class="cta-bottom">
                     <h2>{{ t('interestedInProject') }}</h2>
-                    <p style="opacity: 0.9; margin-top: 10px;">{{ t('checkSourceCode') }}</p>
-                    <div class="cta-buttons">
+                    <p>{{ t('checkSourceCode') }}</p>
+                    <div class="cta-actions">
                         <a v-for="(link, i) in project.links" :key="i"
-                            :href="typeof link === 'string' ? link : (link.url || '#')" target="_blank" class="btn">
+                            :href="typeof link === 'string' ? link : (link.url || '#')" target="_blank" class="btn btn-glass">
                             {{ typeof link === 'string' ? t('viewProject') : t(link.label || t('viewProject')) }}
                         </a>
-                        <a href="index.html" class="btn secondary">
+                        <a href="index.html" class="btn btn-primary">
                             {{ t('backToResume') }}
                         </a>
                     </div>
                 </div>
-            </main>
+                <div style="height: 60px;"></div>
+            </div>
         </div>
     </div>
 
     <script src="data.js"></script>
     <script src="project.js"></script>
 </body>
-
 </html>
