@@ -425,7 +425,6 @@ section h2 {
 
 .screenshot.starbits-img img {
     width: 120%;
-    column-gap: 150px;
     /* Aumentado em 40% em relação aos 70% originais */
 }
 
