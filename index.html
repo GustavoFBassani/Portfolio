@@ -23,9 +23,14 @@
 
 <body>
     <div id="app">
-        <button class="btn btn-glass btn-lang" @click="toggleLanguage">
-            <span class="material-icons">language</span> {{ currentLang === 'pt' ? 'EN' : 'PT' }}
-        </button>
+        <div class="controls-top-right">
+            <button class="btn btn-glass" @click="toggleTheme">
+                <span class="material-icons">{{ currentTheme === 'dark' ? 'light_mode' : 'dark_mode' }}</span>
+            </button>
+            <button class="btn btn-glass" @click="toggleLanguage">
+                <span class="material-icons">language</span> {{ currentLang === 'pt' ? 'EN' : 'PT' }}
+            </button>
+        </div>
 
         <div class="container">
             <header>
@@ -59,7 +64,8 @@
                             class="card">
                             <div class="card-img-wrapper">
                                 <img :src="project.cardImage || project.image" alt="Project image" class="card-img">
-                                <img src="images/applestore.png" alt="App Store" class="badge-appstore" v-if="project.inAppStore">
+                                <img src="images/applestore.png" alt="App Store" class="badge-appstore"
+                                    v-if="project.inAppStore">
                             </div>
                             <div class="card-body">
                                 <h3>{{ l(project.title) }}</h3>

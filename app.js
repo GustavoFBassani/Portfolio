@@ -4,9 +4,9 @@ createApp({
     data() {
         return {
             ...PORTFOLIO_DATA,
-            editMode: false,
             activeModal: null,
             currentLang: 'en',
+            currentTheme: 'dark',
         }
     },
     computed: {
@@ -24,6 +24,15 @@ createApp({
         }
     },
     methods: {
+        toggleTheme() {
+            this.currentTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('portfolioTheme', this.currentTheme);
+            if (this.currentTheme === 'light') {
+                document.body.classList.add('light-theme');
+            } else {
+                document.body.classList.remove('light-theme');
+            }
+        },
         toggleLanguage() {
             this.currentLang = this.currentLang === 'en' ? 'pt' : 'en';
             localStorage.setItem('portfolioLang', this.currentLang);
@@ -51,6 +60,13 @@ createApp({
         }
     },
     mounted() {
+        const savedTheme = localStorage.getItem('portfolioTheme');
+        const theme = savedTheme || ((window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark');
+        this.currentTheme = theme;
+        if (theme === 'light') {
+            document.body.classList.add('light-theme');
+        }
+
         const savedLang = localStorage.getItem('portfolioLang');
         if (savedLang) {
             this.currentLang = savedLang;

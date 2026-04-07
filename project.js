@@ -9,6 +9,12 @@ createApp({
         }
     },
     mounted() {
+        const savedTheme = localStorage.getItem('portfolioTheme');
+        const theme = savedTheme || ((window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark');
+        if (theme === 'light') {
+            document.body.classList.add('light-theme');
+        }
+
         const savedLang = localStorage.getItem('portfolioLang');
         if (savedLang) {
             this.currentLang = savedLang;
