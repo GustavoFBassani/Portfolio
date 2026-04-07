@@ -43,9 +43,9 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
         {
             id: 'completeness',
             title: 'Completeness',
-            shortDescription: { 
-                en: 'Habit tracking app to improve focus and daily productivity.', 
-                pt: 'Aplicativo de rastreamento de hábitos focado em produtividade diária.' 
+            shortDescription: {
+                en: 'Habit tracking app to improve focus and daily productivity.',
+                pt: 'Aplicativo de rastreamento de hábitos focado em produtividade diária.'
             },
             longDescription: {
                 en: 'This application was developed with a focus on performance, scalability and user experience, adopting the MVVM architecture to separate responsibilities and ensure clear reactive states between ViewModels and Views in SwiftUI. Persistence uses SwiftData with declarative models and reactive queries, automatically reflecting interface changes. The project is structured in multiple targets for staging and production environments, plus a dedicated target for watchOS with efficient WatchConnectivity communication, offering fast Apple Watch experiences including complications. SwiftUI Widgets provide essential information on Home and Lock Screen with intelligent timelines and adaptive design. Factory patterns and dependency injection centralize service, repository and ViewModel creation, facilitating implementation swaps and increasing testability. The UI Tests suite validates critical flows, accessibility, navigation and error states, integrating with the build pipeline for continuous quality. Asynchronous operations use Swift Concurrency (async/await and actors) for concurrency safety and readability. Finally, observability with structured logs and accessibility focus (Dynamic Type, VoiceOver and high contrast) ensure efficient diagnosis, privacy and a fluid, inclusive experience across the Apple ecosystem.',
@@ -56,13 +56,14 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
                 pt: '• Criação rotineira customizada com sugestões inteligentes pelo próprio uso.\n• Reconhecimentos visuais dinâmicos em cada quebra de recorde.\n• Monitoramento diário indicando saúde de rotina e "Completeza" beirando os 100%.\n• Análises através de gráficos interativos do SwiftCharts com janelas temporais.\n• Widgets com deep link para engajamento instantâneo via tela de bloqueio.\n• Ações rápidas unificadas no braço via Apple Watch sem pegar o celular.\n• Integração fluida em Notificações Locais com Call To Actions.\n• 100% Funcional Offline com sincronias em background.\n• Sistema de lembrete com agendamento local.'
             },
             image: 'images/Completeness.png',
+            cardImage: 'images/completenessCard.png',
             links: [
                 { url: 'https://github.com/GustavoFBassani/Completeness', label: 'View on GitHub', icon: 'github' },
                 { url: 'https://apps.apple.com/br/app/completeness/id6752423274', label: 'View on App Store', icon: 'apple' }
             ],
             tools: ['SwiftUI', 'CloudKit', 'CI/CD', 'Localizable', 'WatchOS', 'Widgets', 'Swift Concurrency', 'MVVM', 'SwiftData', 'Testes', 'Scrum'],
             mainTools: ['SwiftUI', 'WatchOS', 'Widgets', 'MVVM'],
-            screenshots: ['images/Completeness-1.png', 'images/Completeness-2.png', 'images/Completeness-3.png']
+            screenshots: ['images/Completeness-1.png', 'images/Completeness-2.png', 'images/Completeness-3.png', 'images/Completeness-4.png', 'images/Completeness-5.png', 'images/Completeness-6.png']
         },
         {
             id: 'nikki-journal',
@@ -80,13 +81,14 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
                 pt: '• Tela livre isolada para pensamentos focados em pausa.\n• Tema japonês unicamente construído sem bibliotecas visuais de terceiros.\n• Troca narrativa contendo renderização 3D como metáforas reativas.\n• Arquivo vivo manipulável em realidade virtual desenhado via Reality Composer.\n• Grade com organização automática e filtros.\n• Experiência extremamente orgânica voltadas à ansiedade.\n• Arquitetura escalável para integrações de nuvem futuras.'
             },
             image: 'images/NikkiJournal.png',
+            cardImage: 'images/NikkiCard.png',
             links: [
                 { url: 'https://github.com/GustavoFBassani/Nikki', label: 'View on GitHub', icon: 'github' },
                 { url: 'https://apps.apple.com/br/app/nikki-journal/id6756323938?l=en-GB', label: 'View on App Store', icon: 'apple' }
             ],
             tools: ['SwiftUI', 'RealityKit', 'Reality Composer', 'SwiftData', 'MVVM', 'Swift Concurrency', 'Localizable'],
             mainTools: ['SwiftUI', 'RealityKit', 'MVVM'],
-            screenshots: ['images/Nikki-1.png', 'images/Nikki-2.png', 'images/Nikki-3.png']
+            screenshots: ['images/Nikki-1.png', 'images/Nikki-2.png', 'images/Nikki-3.png', 'images/Nikki-4.png', 'images/Nikki-5.png', 'images/Nikki-6.png']
         }
     ],
     featuredProjects: [
@@ -106,12 +108,13 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
                 pt: '• Pareamento inteligente ligando contratantes diretos com banco de perfis.\n• Sistema de Currículo Nativo e portabilidade dentro do próprio perfil no celular.\n• Atualização fluida do status das negociações baseada no modelo relacional.\n• Sistema de buscas complexos com algoritmos baseados em distâncias e nicho.\n• Histórico de contratos unificados garantindo avaliações diretas e confiança do banco.\n• Estética UI clean priorizando informações densas.'
             },
             image: 'images/FreelaOnTap.png',
+            cardImage: 'images/FreelaontapCard.png',
             links: [
                 { url: 'https://github.com/GustavoFBassani/FreelaOnTap', label: 'View on GitHub', icon: 'github' }
             ],
             tools: ['UIKit', 'CoreData', 'CloudKit', 'Public Containers', 'MVC', 'SwiftLint', 'Async/Await', 'Error Handling'],
             mainTools: ['UIKit', 'CloudKit', 'MVC'],
-            screenshots: ['images/Freelaontap-1.png', 'images/Freelaontap-2.png', 'images/Freelaontap-3.png']
+            screenshots: ['images/Freelaontap-1.png', 'images/Freelaontap-2.png', 'images/Freelaontap-3.png', 'images/Freelaontap-4.png', 'images/Freelaontap-5.png', 'images/Freelaontap-6.png']
         },
         {
             id: 'expensshare',
@@ -129,13 +132,14 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
                 pt: '• Base de registros de depósitos, onde, porquê e a foto real do documento da conta alocada para os participantes.\n• Cálculo instantâneo do impacto por pessoa unificado via dashboards.\n• Suporte nativo em subcategorias de uso financeiro e labels adaptáveis.\n• Insigths e painéis detalhados sem sobre-carregar a linha de leitura.\n• Máxima fluidez garantindo integridade das mudanças e banco de edições histórico.'
             },
             image: 'images/expensshare.png',
+            cardImage: 'images/ExpensshareCard.png',
             links: [
                 { url: 'https://github.com/GustavoFBassani/Expensshare/tree/main', label: 'View on GitHub', icon: 'github' },
                 { url: 'https://www.figma.com/design/Z8czxgcBAknm6qa8YjgG25/Gustavo-Ferreira-Bassani?node-id=204-16261', label: 'View on Figma', icon: 'figma' }
             ],
             tools: ['SwiftUI', 'SwiftData', 'Figma'],
             mainTools: ['SwiftUI', 'SwiftData', 'MV'],
-            screenshots: ['images/Expensshare-1.png', 'images/Expensshare-2.png', 'images/Expensshare-3.png']
+            screenshots: ['images/Expensshare-1.png', 'images/Expensshare-2.png', 'images/Expensshare-3.png', 'images/Expensshare-4.png', 'images/Expensshare-5.png', 'images/Expensshare-6.png']
         },
         {
             id: 'before-it-floods',
@@ -153,12 +157,13 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
                 pt: '• Histórias interativas baseadas em consequências diretas focadas em reações extremas aos temporais.\n• Abordagem educacional sem jargões engessados com feedback da engine lúdica.\n• Acessibilidade nativa e progressão de cenas simples e de altíssima resposta tátil.\n• Projeto concebido 100% de forma autoral para as restrições da WWDC com impacto sócio-ambiental explícito.'
             },
             image: "images/BeforeItFlood.png",
+            cardImage: 'images/BeforeItFloodsCard.png',
             links: [
                 { "url": "https://github.com/GustavoFBassani/BeforeItFloods", "label": "View on GitHub", "icon": "github" }
             ],
             tools: ["Swift", "SwiftUI", "SpriteKit", "Xcode", "User Experience Design", "Educational Design"],
             mainTools: ["Swift", "SwiftUI", "SpriteKit", "UX Design"],
-            screenshots: ["images/BeforeItFloods-1.png", "images/BeforeItFloods-2.png", "images/BeforeItFloods-3.png"]
+            screenshots: ["images/BeforeItFloods-1.png", "images/BeforeItFloods-2.png", "images/BeforeItFloods-3.png", "images/BeforeItFloods-4.png", "images/BeforeItFloods-5.png", "images/BeforeItFloods-6.png"]
         },
         {
             id: 'StarBits',
@@ -175,13 +180,14 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
                 en: "• Classic grid-based puzzle mechanics with progressive difficulty.\n• Multiple themed worlds and levels to unlock using collected stars.\n• Interactive elements including pushable rocks, melting ice, and portals.\n• Intuitive custom on-screen D-Pad controls designed for iOS.\n• Seamless integration between SwiftUI interfaces and SpriteKit game scenes.\n• Player progress and unlocked data persisted locally using SwiftData.\n• Clean architecture with isolated manager classes for entities and logic.",
                 pt: '• Motor clássico baseado em grids, detecção de colisões e física contínua aplicada com atrito em gelo.\n• Gestão customizada dos mundos dividida na lógica limpa em SwiftUI.\n• Ações exclusivas atreladas a reações secundárias, blocos rochosos arrastáveis empurrando gelos com base no peso das portas reativas.\n• Arquitetura forte, baseada em camadas gerenciadoras independentes no ecossistema sem pacotes de terceiros.\n• Progresso blindado e salvo veloz via SwiftData de ponta.'
             },
-            image: "images/StarBits.png",
+            image: "images/Starbits.png",
+            cardImage: 'images/StarbitsCard.png',
             links: [
                 { url: "https://github.com/SandlerRodrigo/game-challenge", "label": "View on GitHub", "icon": "github" }
             ],
             tools: ["Swift", "SwiftUI", "SpriteKit", "SwiftData", "GameplayKit", "Xcode"],
             mainTools: ["SwiftUI", "SpriteKit", "SwiftData"],
-            screenshots: ["images/StarBits-1.png", "images/StarBits-2.png", "images/StarBits-3.png"]
+            screenshots: ["images/Starbits-1.png", "images/Starbits-2.png", "images/Starbits-3.png", "images/Starbits-4.png", "images/Starbits-5.png", "images/Starbits-6.png"]
         }
     ],
     otherProjects: [
@@ -201,12 +207,13 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
                 pt: '• Mockers focados em simulações transacionais de Market.\n• Tratamento seguro da hierarquia Json para Models fortemente tipados via structs em Swift limitando "undefined behaviours" (comportamentos ocultos).\n• Telas que conversam assíncronas gerindo loadings espetaculares focados na UX dos refreshs de busca remota.\n• Arquitetado na fundação moderna do ecossistema assíncrono Apple sem bibliotecas como RXSwift ou Alamofire.'
             },
             image: 'images/emptyIcon.png',
+            cardImage: 'images/apiChallengeCard.png',
             links: [
                 { url: 'https://github.com/EduardoFen12/API-Challange', label: 'View on GitHub', icon: 'github' },
             ],
             tools: ['SwiftUI', 'SwiftData', 'MVVM', 'API Integration', 'Dependency Injection', 'Localization', 'Accessibility', 'Unit Testing'],
             mainTools: ['SwiftUI', 'MVVM', 'API Integration'],
-            screenshots: ['images/apiChallenge-1.png', 'images/apiChallenge-2.png', 'images/apiChallenge-3.png']
+            screenshots: ['images/apiChallenge-1.png', 'images/apiChallenge-2.png', 'images/apiChallenge-3.png', 'images/apiChallenge-4.png', 'images/apiChallenge-5.png', 'images/apiChallenge-6.png']
         },
         {
             id: 'trivia-game',

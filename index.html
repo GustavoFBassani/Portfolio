@@ -58,7 +58,7 @@
                         <a v-for="(project, index) in allProjects" :key="index" :href="getProjectLink(project)"
                             class="card">
                             <div class="card-img-wrapper">
-                                <img :src="project.image" alt="Project image" class="card-img">
+                                <img :src="project.cardImage || project.image" alt="Project image" class="card-img">
                                 <div class="badge-appstore" v-if="project.inAppStore">
                                     <svg viewBox="0 0 384 512" width="12" height="12"
                                         style="fill: currentColor; margin-top:-2px;">
