@@ -139,7 +139,8 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
             ],
             tools: ['SwiftUI', 'SwiftData', 'Figma'],
             mainTools: ['SwiftUI', 'SwiftData', 'MV'],
-            screenshots: ['images/expensshare-1.png', 'images/expensshare-2.png', 'images/expensshare-3.png', 'images/expensshare-4.png', 'images/expensshare-5.png', 'images/expensshare-6.png']
+            screenshots: ['images/Expensshare-1.png', 'images/Expensshare-2.png', 'images/Expensshare-3.png', 'images/Expensshare-4.png', 'images/Expensshare-5.png', 'images/Expensshare-6.png']
+
         },
         {
             id: 'before-it-floods',
