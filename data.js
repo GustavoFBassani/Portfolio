@@ -66,11 +66,11 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
             mainTools: ['SwiftUI', 'WatchOS', 'Widgets', 'MVVM'],
             screenshots: ['images/Completeness-1.png', 'images/Completeness-2.png', 'images/Completeness-3.png', 'images/Completeness-4.png', 'images/Completeness-5.png', 'images/Completeness-6.png'],
             team: [
-                { name: 'Gustavo Bassani', role: 'Dev', scrumRole: 'PM', linkedin: 'https://www.linkedin.com/in/gustavofbassani/' },
-                { name: 'Gustavo Meleu', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavo-melleu-218533231/' },
-                { name: 'Vitor Martins', role: 'Design', scrumRole: null, linkedin: 'https://www.linkedin.com/in/vítor-martins-940576207/' },
-                { name: 'Vitor Bruno', role: 'Dev', scrumRole: 'SM', linkedin: 'https://www.linkedin.com/in/vitor-bruno-243975258/' },
-                { name: 'Pablo Garcia', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/pablogarciadev/?locale=en' }
+                { name: 'Gustavo Bassani', role: 'Dev', scrumRole: 'PM', linkedin: 'https://www.linkedin.com/in/gustavofbassani/', photo: 'images/perfil.png' },
+                { name: 'Gustavo Meleu', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavo-melleu-218533231/', photo: 'images/Contributors/GustavoMeleu.jpeg' },
+                { name: 'Vitor Martins', role: 'Design', scrumRole: null, linkedin: 'https://www.linkedin.com/in/vítor-martins-940576207/', photo: 'images/Contributors/VitorMartins.jpeg' },
+                { name: 'Vitor Bruno', role: 'Dev', scrumRole: 'SM', linkedin: 'https://www.linkedin.com/in/vitor-bruno-243975258/', photo: 'images/Contributors/VitorBruno.jpeg' },
+                { name: 'Pablo Garcia', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/pablogarciadev/?locale=en', photo: 'images/Contributors/Pablo.jpeg' }
             ]
         },
         {
@@ -98,11 +98,11 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
             mainTools: ['SwiftUI', 'RealityKit', 'MVVM'],
             screenshots: ['images/Nikki-1.png', 'images/Nikki-2.png', 'images/Nikki-3.png', 'images/Nikki-4.png', 'images/Nikki-5.png', 'images/Nikki-6.png'],
             team: [
-                { name: 'Gustavo Bassani', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavofbassani/' },
-                { name: 'Alex Fraga', role: 'Dev', scrumRole: 'SM', linkedin: 'https://www.linkedin.com/in/alex-fraga1/' },
-                { name: 'Sofia Leitao', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/sofiafleitao/' },
-                { name: 'Rafael Toneto', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/rafael-toneto-429b76316/' },
-                { name: 'Martina Adegas', role: 'Design', scrumRole: 'PM', linkedin: 'https://www.linkedin.com/in/martina-nogueira-da-gama-adegas/' }
+                { name: 'Gustavo Bassani', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavofbassani/', photo: 'images/perfil.png' },
+                { name: 'Alex Fraga', role: 'Dev', scrumRole: 'SM', linkedin: 'https://www.linkedin.com/in/alex-fraga1/', photo: 'images/Contributors/Alex.jpeg' },
+                { name: 'Sofia Leitao', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/sofiafleitao/', photo: 'images/Contributors/Sofia.jpeg' },
+                { name: 'Rafael Toneto', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/rafael-toneto-429b76316/', photo: 'images/Contributors/RafaelToneto.jpeg' },
+                { name: 'Martina Adegas', role: 'Design', scrumRole: 'PM', linkedin: 'https://www.linkedin.com/in/martina-nogueira-da-gama-adegas/', photo: 'images/Contributors/Martina.jpeg' }
             ]
         }
     ],
@@ -131,11 +131,11 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
             mainTools: ['UIKit', 'CloudKit', 'MVC'],
             screenshots: ['images/Freelaontap-1.png', 'images/Freelaontap-2.png', 'images/Freelaontap-3.png', 'images/Freelaontap-4.png', 'images/Freelaontap-5.png', 'images/Freelaontap-6.png'],
             team: [
-                { name: 'Gustavo Bassani', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavofbassani/' },
-                { name: 'Adriel de Souza', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/dsadriel/' },
-                { name: 'Giulia Stefainski', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/giulia-cs/' },
-                { name: 'Ana Poleto', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/ana-poletto-2a7222318/' },
-                { name: 'Vinicius Cadore', role: 'Design', scrumRole: null, linkedin: 'https://www.linkedin.com/in/cadoreee/' }
+                { name: 'Gustavo Bassani', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavofbassani/', photo: 'images/perfil.png' },
+                { name: 'Adriel de Souza', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/dsadriel/', photo: 'images/Contributors/Adriel.jpeg' },
+                { name: 'Giulia Stefainski', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/giulia-cs/', photo: 'images/Contributors/Giulia.jpeg' },
+                { name: 'Ana Poleto', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/ana-poletto-2a7222318/', photo: 'images/Contributors/AnaPoeleto.jpeg' },
+                { name: 'Vinicius Cadore', role: 'Design', scrumRole: null, linkedin: 'https://www.linkedin.com/in/cadoreee/', photo: 'images/Contributors/ViniciusCadore.jpeg' }
             ]
         },
         {
@@ -163,7 +163,7 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
             mainTools: ['SwiftUI', 'SwiftData', 'MV'],
             screenshots: ['images/Expensshare-1.png', 'images/Expensshare-2.png', 'images/Expensshare-3.png', 'images/Expensshare-4.png', 'images/Expensshare-5.png', 'images/Expensshare-6.png'],
             team: [
-                { name: 'Gustavo Bassani', role: 'Dev / Design', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavofbassani/' }
+                { name: 'Gustavo Bassani', role: 'Dev / Design', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavofbassani/', photo: 'images/perfil.png' }
             ]
 
         },
@@ -191,7 +191,7 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
             mainTools: ["Swift", "SwiftUI", "SpriteKit", "UX Design"],
             screenshots: ["images/BeforeItFloods-1.png", "images/BeforeItFloods-2.png", "images/BeforeItFloods-3.png", "images/BeforeItFloods-4.png", "images/BeforeItFloods-5.png", "images/BeforeItFloods-6.png"],
             team: [
-                { name: 'Gustavo Bassani', role: 'Dev / Design', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavofbassani/' }
+                { name: 'Gustavo Bassani', role: 'Dev / Design', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavofbassani/', photo: 'images/perfil.png' }
             ]
         },
         {
@@ -218,11 +218,11 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
             mainTools: ["SwiftUI", "SpriteKit", "SwiftData"],
             screenshots: ["images/Starbits-1.png", "images/Starbits-2.png", "images/Starbits-3.png", "images/Starbits-4.png", "images/Starbits-5.png", "images/Starbits-6.png"],
             team: [
-                { name: 'Gustavo Bassani', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavofbassani/' },
-                { name: 'Joao Carvalho', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/joão-pedro-teixeira-de-carvalho-6631b6224/' },
-                { name: 'Rodrigo Sandler', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/rodrigo-sandler-1945a9220/' },
-                { name: 'Julia Nascimento', role: 'Design', scrumRole: null, linkedin: 'https://www.linkedin.com/in/julianascimentocosta/' },
-                { name: 'Giovana Diesel', role: 'Design', scrumRole: null, linkedin: 'https://www.linkedin.com/in/giovana-diesel/' }
+                { name: 'Gustavo Bassani', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavofbassani/', photo: 'images/perfil.png' },
+                { name: 'Joao Carvalho', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/joão-pedro-teixeira-de-carvalho-6631b6224/', photo: 'images/Contributors/JoaoCarvalho.jpeg' },
+                { name: 'Rodrigo Sandler', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/rodrigo-sandler-1945a9220/', photo: 'images/Contributors/RodrigoSandler.png' },
+                { name: 'Julia Nascimento', role: 'Design', scrumRole: null, linkedin: 'https://www.linkedin.com/in/julianascimentocosta/', photo: 'images/Contributors/JuliaNascimento.png' },
+                { name: 'Giovana Diesel', role: 'Design', scrumRole: null, linkedin: 'https://www.linkedin.com/in/giovana-diesel/', photo: 'images/Contributors/GiovanaDiesel.jpeg' }
             ]
         }
     ],
@@ -251,8 +251,8 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
             mainTools: ['SwiftUI', 'MVVM', 'API Integration'],
             screenshots: ['images/apiChallenge-1.png', 'images/apiChallenge-2.png', 'images/apiChallenge-3.png', 'images/apiChallenge-4.png', 'images/apiChallenge-5.png', 'images/apiChallenge-6.png'],
             team: [
-                { name: 'Gustavo Bassani', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavofbassani/' },
-                { name: 'Eduardo Fensterseifer', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/eduardo-fensterseifer/' }
+                { name: 'Gustavo Bassani', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavofbassani/', photo: 'images/perfil.png' },
+                { name: 'Eduardo Fensterseifer', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/eduardo-fensterseifer/', photo: 'images/Contributors/Eduardo.png' }
             ]
         },
         {
@@ -278,8 +278,8 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
             mainTools: ['Swift', 'Terminal App'],
             screenshots: [],
             team: [
-                { name: 'Gustavo Bassani', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavofbassani/' },
-                { name: 'Vitor Bruno', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/vitor-bruno-243975258/' }
+                { name: 'Gustavo Bassani', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavofbassani/', photo: 'images/perfil.png' },
+                { name: 'Vitor Bruno', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/vitor-bruno-243975258/', photo: 'images/Contributors/VitorBruno.jpeg' }
             ]
         },
     ],
