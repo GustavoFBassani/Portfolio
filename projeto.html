@@ -68,6 +68,25 @@
                         </span>
                     </div>
                 </section>
+
+                <section v-if="project.team && project.team.length > 0" class="detail-section">
+                    <h2>{{ t('teamMembers') }}</h2>
+                    <div class="team-grid">
+                        <a v-for="(member, idx) in project.team" :key="idx" :href="member.linkedin" target="_blank" class="team-card">
+                            <div class="team-avatar">
+                                <span class="material-icons">person</span>
+                            </div>
+                            <div class="team-info">
+                                <h3>{{ member.name }}</h3>
+                                <p>
+                                    {{ member.role }}
+                                    <template v-if="member.scrumRole"> • {{ member.scrumRole }}</template>
+                                </p>
+                            </div>
+                            <span class="material-icons link-icon">open_in_new</span>
+                        </a>
+                    </div>
+                </section>
             </main>
 
             <div class="container">
