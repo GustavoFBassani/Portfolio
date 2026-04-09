@@ -88,14 +88,14 @@
                 </div>
                 <div id="about" class="section" style="padding-top: 60px;">
                     <h2 class="section-title">{{ t('aboutMe') }}</h2>
-                    <p style="white-space: pre-wrap; line-height: 1.8; color: var(--text-secondary); font-size: 1.1rem; max-width: 800px;">
+                    <p style="white-space: pre-wrap; line-height: 1.8; color: var(--text-secondary); font-size: 1.1rem;">
                         {{ t('aboutText') }}
                     </p>
                 </div>
 
             <div id="experiences" class="section" style="padding-top: 60px;">
                 <h2 class="section-title">{{ t('experiencesMenu') || 'Experiences' }}</h2>
-                <div style="max-width: 800px;">
+                <div>
                     <div v-for="(exp, index) in recentExperiences" :key="index" class="timeline-item">
                         <div class="timeline-title">{{ l(exp.position) }}</div>
                         <div class="timeline-meta">{{ l(exp.period) }} • {{ exp.company }} — {{ exp.location }}</div>
