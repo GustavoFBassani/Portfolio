@@ -21,19 +21,37 @@
 <body>
     <div id="app">
         <div v-if="project">
-            <div class="hero-detail" :style="{ backgroundImage: `url(${project.image})` }">
-                <div class="toolbar-top">
-                    <a href="index.html" class="btn btn-glass">
-                        <span class="material-icons">arrow_back</span>
+            <nav class="navbar">
+                <div class="navbar-container">
+                    <a href="index.html" class="btn btn-glass nav-action-btn">
+                        <span class="material-icons" style="font-size: 0.95rem;">chevron_left</span>
+                        {{ t('backToHome') }}
                     </a>
+                    <div class="navbar-links">
+                        <a href="#about-project" class="nav-item">{{ t('aboutProject') }}</a>
+                        <a href="#screenshots" class="nav-item">{{ t('screenshots') }}</a>
+                        <a href="#what-app-does" class="nav-item">{{ t('whatAppDoes') }}</a>
+                        <a href="#main-tools" class="nav-item">{{ t('mainTools') }}</a>
+                        <a href="#contributors" class="nav-item" v-if="project.team && project.team.length > 0">{{ t('teamMembers') }}</a>
+                        <div class="nav-divider"></div>
+                        <button class="btn btn-glass nav-action-btn" @click="toggleTheme">
+                            <span class="material-icons" style="font-size: 0.95rem;">{{ currentTheme === 'dark' ? 'light_mode' : 'dark_mode' }}</span>
+                        </button>
+                        <button class="btn btn-glass nav-action-btn" @click="toggleLanguage">
+                            <span class="material-icons" style="font-size: 0.9rem; margin-right: 4px;">language</span> {{ currentLang === 'pt' ? 'EN' : 'PT' }}
+                        </button>
+                    </div>
                 </div>
+            </nav>
+
+            <div class="hero-detail" :style="{ backgroundImage: `url(${project.image})` }">
                 <div class="hero-content">
                     <h1>{{ l(project.title) }}</h1>
                 </div>
             </div>
 
             <main class="detail-main">
-                <section class="detail-section">
+                <section id="about-project" class="detail-section">
                     <h2>{{ t('aboutProject') }}</h2>
                     <p class="detail-description" style="white-space: pre-wrap;">{{ l(project.longDescription) }}</p>
                 </section>
@@ -45,7 +63,7 @@
                     </div>
                 </section>
 
-                <section v-if="project.screenshots && project.screenshots.length > 0" class="detail-section">
+                <section id="screenshots" v-if="project.screenshots && project.screenshots.length > 0" class="detail-section">
                     <h2>{{ t('screenshots') }}</h2>
                     <div class="screenshots-container">
                         <div v-for="(img, idx) in project.screenshots" :key="idx" class="screenshot-item" :class="{'starbits-img': project.id === 'StarBits'}">
@@ -54,12 +72,12 @@
                     </div>
                 </section>
 
-                <section class="detail-section">
+                <section id="what-app-does" class="detail-section">
                     <h2>{{ t('whatAppDoes') }}</h2>
                     <p class="detail-description" style="white-space: pre-wrap;">{{ l(project.what) || t('noFunctionalDescription') }}</p>
                 </section>
 
-                <section class="detail-section">
+                <section id="main-tools" class="detail-section">
                     <h2>{{ t('mainTools') }}</h2>
                     <div class="tags">
                         <span v-if="!project.tools || project.tools.length === 0">{{ t('noToolsSpecified') }}</span>
@@ -69,7 +87,7 @@
                     </div>
                 </section>
 
-                <section v-if="project.team && project.team.length > 0" class="detail-section">
+                <section id="contributors" v-if="project.team && project.team.length > 0" class="detail-section">
                     <h2>{{ t('teamMembers') }}</h2>
                     <div class="team-grid">
                         <a v-for="(member, idx) in project.team" :key="idx" :href="member.linkedin" target="_blank" class="team-card">
@@ -98,9 +116,6 @@
                         <a v-for="(link, i) in project.links" :key="i"
                             :href="typeof link === 'string' ? link : (link.url || '#')" target="_blank" class="btn btn-glass">
                             {{ typeof link === 'string' ? t('viewProject') : t(link.label || t('viewProject')) }}
-                        </a>
-                        <a href="index.html" class="btn btn-primary">
-                            {{ t('backToResume') }}
                         </a>
                     </div>
                 </div>

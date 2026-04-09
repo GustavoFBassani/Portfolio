@@ -62,17 +62,39 @@ html {
     scroll-behavior: smooth;
 }
 
-#projects,
-#about,
-#experiences {
-    scroll-margin-top: 80px;
+#projects, #about, #experiences,
+#about-project, #screenshots, #what-app-does, #main-tools, #contributors {
+    scroll-margin-top: 65px;
+}
+
+a.navbar-brand {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.navbar-back {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navbar-back:hover {
+    color: var(--text-primary);
+}
+
+.navbar-back .material-icons {
+    font-size: 1.2rem;
 }
 
 /* Navbar */
 .navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
     width: 100%;
     z-index: 100;
     background-color: var(--modal-header-bg);
@@ -479,20 +501,32 @@ body.light-theme .subtitle {
 }
 
 .detail-main {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 60px 24px;
 }
 
 .detail-section {
-    margin-bottom: 60px;
+    margin-bottom: 18px;
 }
 
 .detail-section h2 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
     letter-spacing: -0.02em;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.detail-section h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: var(--text-secondary);
+    opacity: 0.35;
 }
 
 .detail-description {
@@ -630,7 +664,7 @@ body.light-theme .subtitle {
     border-radius: var(--radius-lg);
     padding: 60px 40px;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 18px;
     border: 1px solid var(--border);
     position: relative;
     overflow: hidden;

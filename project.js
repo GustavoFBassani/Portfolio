@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             currentLang: 'en',
+            currentTheme: 'dark',
             translations: PORTFOLIO_DATA.translations,
             project: null
         }
@@ -11,6 +12,7 @@ createApp({
     mounted() {
         const savedTheme = localStorage.getItem('portfolioTheme');
         const theme = savedTheme || ((window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark');
+        this.currentTheme = theme;
         if (theme === 'light') {
             document.body.classList.add('light-theme');
         }
@@ -41,6 +43,19 @@ createApp({
         }
     },
     methods: {
+        toggleTheme() {
+            this.currentTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('portfolioTheme', this.currentTheme);
+            if (this.currentTheme === 'light') {
+                document.body.classList.add('light-theme');
+            } else {
+                document.body.classList.remove('light-theme');
+            }
+        },
+        toggleLanguage() {
+            this.currentLang = this.currentLang === 'en' ? 'pt' : 'en';
+            localStorage.setItem('portfolioLang', this.currentLang);
+        },
         t(key) {
             const entry = this.translations?.[key];
             if (!entry) return key;

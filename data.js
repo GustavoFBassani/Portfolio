@@ -35,7 +35,8 @@ Atualmente sou bolsista na Apple Developer Academy, onde desenvolvo projetos par
         projectsMenu: { en: 'Projects', pt: 'Projetos' },
         experiencesMenu: { en: 'Experiences', pt: 'Experiências' },
         seeAllExperiences: { en: 'View all my experiences in my full resume', pt: 'Veja todas minhas experiências no meu currículo completo.' },
-        downloadResume: { en: 'Download Resume', pt: 'Download Currículo' }
+        downloadResume: { en: 'Download Resume', pt: 'Download Currículo' },
+        backToHome: { en: 'Back to Home', pt: 'Voltar' }
     },
     profile: {
         name: 'Gustavo Ferreira Bassani',
