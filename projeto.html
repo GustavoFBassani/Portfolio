@@ -25,14 +25,29 @@
                 <div class="navbar-container">
                     <a href="index.html" class="btn btn-glass nav-action-btn">
                         <span class="material-icons" style="font-size: 0.95rem;">chevron_left</span>
-                        {{ t('backToHome') }}
+                        <span class="navbar-back-text">{{ t('backToHome') }}</span>
                     </a>
                     <div class="navbar-links">
-                        <a href="#about-project" class="nav-item">{{ t('aboutProject') }}</a>
-                        <a href="#screenshots" class="nav-item">{{ t('screenshots') }}</a>
-                        <a href="#what-app-does" class="nav-item">{{ t('whatAppDoes') }}</a>
-                        <a href="#main-tools" class="nav-item">{{ t('mainTools') }}</a>
-                        <a href="#contributors" class="nav-item" v-if="project.team && project.team.length > 0">{{ t('teamMembers') }}</a>
+                        <a href="#about-project" class="nav-item">
+                            <span class="nav-label-full">{{ t('aboutProject') }}</span>
+                            <span class="nav-label-short">About</span>
+                        </a>
+                        <a href="#screenshots" class="nav-item">
+                            <span class="nav-label-full">{{ t('screenshots') }}</span>
+                            <span class="nav-label-short">Screenshots</span>
+                        </a>
+                        <a href="#what-app-does" class="nav-item">
+                            <span class="nav-label-full">{{ t('whatAppDoes') }}</span>
+                            <span class="nav-label-short">Features</span>
+                        </a>
+                        <a href="#main-tools" class="nav-item">
+                            <span class="nav-label-full">{{ t('mainTools') }}</span>
+                            <span class="nav-label-short">Tools</span>
+                        </a>
+                        <a href="#contributors" class="nav-item" v-if="project.team && project.team.length > 0">
+                            <span class="nav-label-full">{{ t('teamMembers') }}</span>
+                            <span class="nav-label-short">Team</span>
+                        </a>
                         <div class="nav-divider"></div>
                         <button class="btn btn-glass nav-action-btn" @click="toggleTheme">
                             <span class="material-icons" style="font-size: 0.95rem;">{{ currentTheme === 'dark' ? 'light_mode' : 'dark_mode' }}</span>

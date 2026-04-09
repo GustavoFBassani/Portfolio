@@ -172,9 +172,18 @@ a.navbar-brand {
 }
 
 .nav-action-btn {
-    padding: 4px 8px;
-    font-size: 0.75rem;
+    padding: 6px 12px;
+    font-size: 0.8rem;
     position: static;
+}
+
+/* By default, show full labels and hide short ones */
+.nav-label-short {
+    display: none;
+}
+
+.nav-label-full {
+    display: inline;
 }
 
 /* Utilities */
@@ -942,7 +951,7 @@ body.light-theme .subtitle {
     }
 
     .detail-main {
-        padding: 40px 24px;
+        padding: 40px 16px;
     }
 
     .modal-sheet {
@@ -952,5 +961,58 @@ body.light-theme .subtitle {
         position: absolute;
         bottom: 0;
         border-bottom: none;
+    }
+
+    /* Navbar mobile */
+    .navbar-container {
+        padding: 6px 12px;
+        gap: 6px;
+        flex-wrap: nowrap;
+    }
+
+    .navbar-brand {
+        display: none;
+    }
+
+    .navbar-links {
+        gap: 4px;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-item {
+        font-size: 0.72rem;
+        padding: 4px 8px;
+    }
+
+    .nav-divider {
+        margin: 0 2px;
+        height: 12px;
+    }
+
+    .nav-action-btn {
+        padding: 4px 6px;
+        font-size: 0.72rem;
+        min-width: unset;
+    }
+
+    .nav-action-btn .material-icons {
+        font-size: 0.85rem !important;
+        margin-right: 0 !important;
+    }
+
+    /* On project page mobile: hide "Back to Home" text, show only icon */
+    .navbar-back-text {
+        display: none;
+    }
+
+    /* Switch to short labels on mobile */
+    .nav-label-full {
+        display: none;
+    }
+
+    .nav-label-short {
+        display: inline;
     }
 }
