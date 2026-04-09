@@ -1015,4 +1015,9 @@ body.light-theme .subtitle {
     .nav-label-short {
         display: inline;
     }
+
+    /* Hide Features button on mobile — it's covered by About */
+    .nav-hide-mobile {
+        display: none !important;
+    }
 }

@@ -28,15 +28,15 @@
                         <span class="navbar-back-text">{{ t('backToHome') }}</span>
                     </a>
                     <div class="navbar-links">
-                        <a href="#about-project" class="nav-item">
-                            <span class="nav-label-full">{{ t('aboutProject') }}</span>
-                            <span class="nav-label-short">About</span>
-                        </a>
                         <a href="#screenshots" class="nav-item">
                             <span class="nav-label-full">{{ t('screenshots') }}</span>
                             <span class="nav-label-short">Screenshots</span>
                         </a>
-                        <a href="#what-app-does" class="nav-item">
+                        <a href="#about-project" class="nav-item">
+                            <span class="nav-label-full">{{ t('aboutProject') }}</span>
+                            <span class="nav-label-short">About</span>
+                        </a>
+                        <a href="#what-app-does" class="nav-item nav-hide-mobile">
                             <span class="nav-label-full">{{ t('whatAppDoes') }}</span>
                             <span class="nav-label-short">Features</span>
                         </a>
@@ -66,9 +66,13 @@
             </div>
 
             <main class="detail-main">
-                <section id="about-project" class="detail-section">
-                    <h2>{{ t('aboutProject') }}</h2>
-                    <p class="detail-description" style="white-space: pre-wrap;">{{ l(project.longDescription) }}</p>
+                <section id="screenshots" v-if="project.screenshots && project.screenshots.length > 0" class="detail-section">
+                    <h2>{{ t('screenshots') }}</h2>
+                    <div class="screenshots-container">
+                        <div v-for="(img, idx) in project.screenshots" :key="idx" class="screenshot-item" :class="{'starbits-img': project.id === 'StarBits'}">
+                            <img :src="img" :alt="`Screenshot ${idx + 1}`">
+                        </div>
+                    </div>
                 </section>
 
                 <section v-if="project.id === 'StarBits'" class="detail-section">
@@ -78,13 +82,9 @@
                     </div>
                 </section>
 
-                <section id="screenshots" v-if="project.screenshots && project.screenshots.length > 0" class="detail-section">
-                    <h2>{{ t('screenshots') }}</h2>
-                    <div class="screenshots-container">
-                        <div v-for="(img, idx) in project.screenshots" :key="idx" class="screenshot-item" :class="{'starbits-img': project.id === 'StarBits'}">
-                            <img :src="img" :alt="`Screenshot ${idx + 1}`">
-                        </div>
-                    </div>
+                <section id="about-project" class="detail-section">
+                    <h2>{{ t('aboutProject') }}</h2>
+                    <p class="detail-description" style="white-space: pre-wrap;">{{ l(project.longDescription) }}</p>
                 </section>
 
                 <section id="what-app-does" class="detail-section">
