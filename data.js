@@ -10,12 +10,12 @@ const PORTFOLIO_DATA = {
         featuredProjects: { en: 'Featured Projects', pt: 'Projetos em Destaque' },
         otherProjects: { en: 'Other Projects', pt: 'Outros Projetos' },
         aboutText: {
-            en: `iOS Developer in training, with a unique trajectory combining 10 years of experience in mathematics teaching with a strong passion for technology. Initially moved to Porto Alegre to study Metallurgical Engineering, but found in mathematics education a way to unite work and passion, teaching ever since. From this experience, I developed an interest in technology as a learning tool and programming logic, which motivated me to steer my career towards software development.
+            en: `iOS Developer with a background in mathematics and strong analytical problem-solving skills, specialized in native iOS development and building real-world mobile applications. Before transitioning to software development, I worked for approximately 10 years as a mathematics teacher, which strengthened my logical reasoning, structured thinking, and ability to analyze complex problems, skills that translate naturally into programming.
 
-Currently, I am a scholarship holder at the Apple Developer Academy, where I develop projects for the iOS ecosystem focusing on Swift, SwiftUI, UIKit, and software architecture. In parallel, I am studying Internet Systems Technology at IFRS, deepening knowledge in algorithms, data structures, and object-oriented programming. My goal is to unite my analytical base developed in mathematics with the creation of innovative and impactful technological solutions.`,
-            pt: `Desenvolvedor iOS em formação com uma trajetória singular, unindo 10 anos de experiência lecionando matemática com uma forte paixão por tecnologia. Inicialmente me mudei para Porto Alegre para estudar Engenharia Metalúrgica, mas encontrei no ensino da matemática uma maneira de unir trabalho e paixão. Dessa vivência, desenvolvi meu interesse pela tecnologia como ferramenta de aprendizagem e lógica de programação, o que me impulsionou a redirecionar a carreira para a área de desenvolvimento de software.
+I am currently a scholar at the Apple Developer Academy, where I develop projects for the iOS ecosystem with a focus on Swift, SwiftUI, UIKit, and software architecture. Alongside this, I am pursuing a degree in Internet Systems Technology at IFRS, deepening my knowledge in algorithms, data structures, and object-oriented programming. I have a particular interest in building well-structured iOS applications, writing clean and maintainable code, and creating purposeful digital solutions.`,
+            pt: `Desenvolvedor iOS com formação em matemática e fortes habilidades analíticas de resolução de problemas, especializado em desenvolvimento nativo para iOS e na construção de aplicações móveis reais. Antes de migrar para o desenvolvimento de software, atuei por aproximadamente 10 anos como professor de matemática, o que fortaleceu meu raciocínio lógico, pensamento estruturado e capacidade de analisar problemas complexos, habilidades que se traduzem naturalmente na programação.
 
-Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo projetos nativos para o ecossistema iOS explorando Swift, SwiftUI, UIKit e arquitetura de software escalável. Em paralelo, curso Tecnologia em Sistemas para Internet no IFRS, aprofundando minha visão em algoritmos e estrutura de dados. O meu grande objetivo é integrar as fortes bases analíticas que tirei da matemática na construção de aplicativos de grande impacto.`
+Atualmente sou bolsista na Apple Developer Academy, onde desenvolvo projetos para o ecossistema iOS com foco em Swift, SwiftUI, UIKit e arquitetura de software. Paralelamente, curso Tecnologia em Sistemas para Internet no IFRS, aprofundando meus conhecimentos em algoritmos, estruturas de dados e programação orientada a objetos. Tenho especial interesse em construir aplicações iOS bem estruturadas, escrever código limpo e de fácil manutenção, e criar soluções digitais com propósito.`
         },
         backToResume: { en: 'Back to Resume', pt: 'Voltar ao Portfólio' },
         aboutProject: { en: 'About the Project', pt: 'Sobre o Projeto' },
@@ -31,7 +31,11 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
         'View on GitHub': { en: 'View on GitHub', pt: 'Ver no GitHub' },
         'View on App Store': { en: 'View on App Store', pt: 'Ver na App Store' },
         'View on Figma': { en: 'View on Figma', pt: 'Ver no Figma' },
-        teamMembers: { en: 'Team & Contributors', pt: 'Equipe e Contribuidores' }
+        teamMembers: { en: 'Team & Contributors', pt: 'Equipe e Contribuidores' },
+        projectsMenu: { en: 'Projects', pt: 'Projetos' },
+        experiencesMenu: { en: 'Experiences', pt: 'Experiências' },
+        seeAllExperiences: { en: 'View all my experiences in my full resume', pt: 'Veja todas minhas experiências no meu currículo completo.' },
+        downloadResume: { en: 'Download Resume', pt: 'Download Currículo' }
     },
     profile: {
         name: 'Gustavo Ferreira Bassani',
@@ -293,8 +297,8 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
                     location: 'Porto Alegre, RS',
                     period: { en: 'Jan 2025 – Present', pt: 'Jan 2025 – Atual' },
                     description: {
-                        en: 'Development of iOS applications using Swift, SwiftUI, and UIKit, applying agile methodologies (Scrum) in collaborative projects. Participation in code reviews, pair programming, and innovation challenges. Focus on modern software architecture (MVC, MVVM), design patterns, and development of solutions with social impact.',
-                        pt: 'Desenvolvimento direto construindo a fundo em todas as arquiteturas Apple baseadas em padrões exigidos nos torneios nativos e demandas educacionais rigorosas de Scrum com reviews técnicos e pair programmings, criando código extremamente limpo na base do UIKit e SwiftUI visando problemas complexos reais.'
+                        en: 'Involved in the design and development of iOS applications using Swift, SwiftUI, and UIKit across the full product lifecycle, from ideation and user research to prototyping, implementation, testing, publishing, and continuous iteration. Development within collaborative teams using agile methodologies, with participation in technical decisions, interface design, and product validation, focusing on user-centered design, accessibility, and Apple ecosystem best practices. Experience with integration of Artificial Intelligence features (intelligent agents and LLM-based workflows), monetization strategies (in-app purchases), use of App Store Connect (TestFlight, builds, metadata, and publishing), implementation of CI/CD pipelines, integration with external APIs and Apple frameworks, as well as iterative prototyping and usability testing. Participation in multidisciplinary projects involving product discovery, architecture decisions, and App Store publishing, with a focus on building scalable, production-ready applications.',
+                        pt: 'Atuação no design e desenvolvimento de aplicativos iOS utilizando Swift, SwiftUI e UIKit ao longo de todo o ciclo de vida do produto, desde ideação e pesquisa com usuários até prototipação, implementação, testes, publicação e iteração contínua. Desenvolvimento em equipes colaborativas utilizando metodologias ágeis, com participação em decisões técnicas, design de interfaces e validação de produto, com foco em design centrado no usuário, acessibilidade e boas práticas do ecossistema Apple. Experiência com integração de recursos de Inteligência Artificial (agentes inteligentes e workflows baseados em LLMs), estratégias de monetização (in-app purchases), uso do App Store Connect (TestFlight, builds, metadados e publicação), implementação de pipelines CI/CD, integração com APIs externas e frameworks Apple, além de prototipação iterativa e testes de usabilidade. Participação em projetos multidisciplinares envolvendo descoberta de produto, decisões de arquitetura e publicação na App Store, com foco no desenvolvimento de aplicações escaláveis e prontas para produção.'
                     }
                 }
             ]
@@ -303,23 +307,23 @@ Atualmente sou bolsista na Apple Developer Academy (PUCRS), onde desenvolvo proj
             section: { en: 'Education', pt: 'Docência Exatas' },
             items: [
                 {
-                    position: { en: 'Mathematics Teacher', pt: 'Professor Matemático e Logística' },
+                    position: { en: 'Mathematics Teacher', pt: 'Professor de Matemática' },
                     company: 'Curso Meta',
                     location: 'Porto Alegre, RS',
                     period: { en: '2021 – 2024', pt: '2021 – 2024' },
                     description: {
-                        en: 'Classes aimed at preparation for the UFRGS entrance exam, focusing on theory, problem-solving, and strategic review. Development of logical reasoning and resolution techniques.',
-                        pt: 'Construção didática intensiva gerindo alto nível tático educacional visando resolução em exatas no exame unificado com foco nos modelos algorítmicos teóricos dos raciocínios das graduações rigorosas (Engenharias).'
+                        en: 'Preparatory course for ENEM and university entrance exams. Responsible for teaching mathematics, developing structured teaching materials, and contributing to the preparation of the preparatory workbook used by students. Focused on developing logical reasoning, problem-solving skills, and specific strategies for college entrance exams.',
+                        pt: 'Curso preparatório para o ENEM e vestibulares. Responsável por ministrar aulas de matemática, desenvolver materiais didáticos estruturados e participar da elaboração do livro preparatório utilizado pelos alunos. Atuação focada no desenvolvimento do raciocínio lógico, resolução de problemas e estratégias específicas para provas de acesso ao ensino superior.'
                     }
                 },
                 {
-                    position: { en: 'Mathematics Teacher', pt: 'Professor Matemático' },
+                    position: { en: 'Mathematics Teacher', pt: 'Professor de Matemática' },
                     company: 'Universitário',
                     location: 'Porto Alegre, RS',
-                    period: { en: '2021 – 2024', pt: '2021 – 2024' },
+                    period: { en: '2021 – 2025', pt: '2021 – 2025' },
                     description: {
-                        en: 'Mathematics teaching for high school and entrance exam preparation (UFRGS and ENEM). Also acted as a private tutor, developing personalized materials and teaching strategies.',
-                        pt: 'Elaborações focadas e tutoria focada guiando a fundo resoluções pontuais com materiais parametrizados de apoio matemático em colégios em alto foco.'
+                        en: 'Mathematics teacher at Colégio Universitário, working simultaneously in regular full-time schooling and part-time university entrance exam preparatory courses from January 2021 to February 2025. Responsible for planning and delivering lessons, developing learning activities using modern educational methodologies and technology, creating engaging learning environments, and using digital tools to support the understanding of mathematical concepts. Also worked in preparatory courses for highly competitive entrance exams, focusing on problem-solving guidance, strengthening logical reasoning, and consolidating key exam content. Strong emphasis on developing analytical thinking and adapting teaching strategies to different learning styles.',
+                        pt: 'Professor de Matemática no Colégio Universitário, atuando simultaneamente no ensino regular (tempo integral) e em cursos preparatórios para vestibulares (meio período) entre janeiro de 2021 e fevereiro de 2025. Responsável pelo planejamento e condução de aulas, desenvolvimento de atividades de aprendizagem utilizando metodologias educacionais modernas e tecnologia, criação de ambientes de aprendizagem engajadores e uso de ferramentas digitais para apoiar a compreensão de conceitos matemáticos. Atuação também em cursos preparatórios para exames de ingresso altamente competitivos, com foco na orientação de resolução de problemas, fortalecimento do raciocínio lógico e consolidação dos principais conteúdos exigidos nas provas. Forte ênfase no desenvolvimento do pensamento analítico e na adaptação das estratégias de ensino a diferentes estilos de aprendizagem.'
                     }
                 },
                 {

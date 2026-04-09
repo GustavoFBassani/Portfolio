@@ -16,6 +16,17 @@ createApp({
         currentEducation() {
             return this.education;
         },
+        recentExperiences() {
+            const allExps = [];
+            if (this.experience) {
+                this.experience.forEach(section => {
+                    if (section.items) {
+                        allExps.push(...section.items);
+                    }
+                });
+            }
+            return allExps.slice(0, 2);
+        },
         allProjects() {
             const apple = this.appleStoreProjects.map(p => ({ ...p, inAppStore: true }));
             const feat = this.featuredProjects.map(p => ({ ...p, inAppStore: false }));

@@ -23,14 +23,23 @@
 
 <body>
     <div id="app">
-        <div class="controls-top-right">
-            <button class="btn btn-glass" @click="toggleTheme">
-                <span class="material-icons">{{ currentTheme === 'dark' ? 'light_mode' : 'dark_mode' }}</span>
-            </button>
-            <button class="btn btn-glass" @click="toggleLanguage">
-                <span class="material-icons">language</span> {{ currentLang === 'pt' ? 'EN' : 'PT' }}
-            </button>
-        </div>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-brand">Gustavo Bassani</div>
+                <div class="navbar-links">
+                    <a href="#projects" class="nav-item">{{ t('projectsMenu') || 'Projects' }}</a>
+                    <a href="#about" class="nav-item">{{ t('aboutMe') }}</a>
+                    <a href="#experiences" class="nav-item">{{ t('experiencesMenu') || 'Experiences' }}</a>
+                    <div class="nav-divider"></div>
+                    <button class="btn btn-glass nav-action-btn" @click="toggleTheme">
+                        <span class="material-icons" style="font-size: 0.95rem;">{{ currentTheme === 'dark' ? 'light_mode' : 'dark_mode' }}</span>
+                    </button>
+                    <button class="btn btn-glass nav-action-btn" @click="toggleLanguage">
+                        <span class="material-icons" style="font-size: 0.9rem; margin-right: 4px;">language</span> {{ currentLang === 'pt' ? 'EN' : 'PT' }}
+                    </button>
+                </div>
+            </div>
+        </nav>
 
         <header class="home-hero"
             :style="{ backgroundImage: currentTheme === 'light' ? `url('images/portfolioHeaderLight.png')` : `url('images/portfolioHeader.png')` }">
@@ -51,16 +60,13 @@
                     <a href="https://github.com/GustavoFBassani" target="_blank" class="btn btn-glass">
                         <span class="material-icons">code</span> GitHub
                     </a>
-                    <button @click.prevent="openModal('about')" class="btn btn-accent">
-                        <span class="material-icons">person</span> {{ t('aboutMe') }}
-                    </button>
                 </div>
             </div>
         </header>
 
         <div class="container">
             <main>
-                <div class="section">
+                <div id="projects" class="section">
                     <h2 class="section-title">Projects</h2>
                     <div class="projects-grid">
                         <a v-for="(project, index) in allProjects" :key="index" :href="getProjectLink(project)"
@@ -80,51 +86,31 @@
                         </a>
                     </div>
                 </div>
-            </main>
-        </div>
-
-        <!-- Sheet Modal (Apple Style) -->
-        <div v-if="activeModal" class="modal-overlay" @click="closeModal">
-            <div class="modal-sheet" @click.stop>
-                <div class="modal-header">
-                    <button class="modal-close" @click="closeModal">
-                        <span class="material-icons">close</span>
-                    </button>
-                </div>
-
-                <div class="modal-body" v-if="activeModal === 'about'">
-                    <h2>{{ t('aboutMe') }}</h2>
-                    <p
-                        style="white-space: pre-wrap; line-height: 1.8; color: var(--text-secondary); font-size: 1.1rem;">
+                <div id="about" class="section" style="padding-top: 60px;">
+                    <h2 class="section-title">{{ t('aboutMe') }}</h2>
+                    <p style="white-space: pre-wrap; line-height: 1.8; color: var(--text-secondary); font-size: 1.1rem; max-width: 800px;">
                         {{ t('aboutText') }}
                     </p>
+                </div>
 
-                    <h3>{{ t('professionalExperience') }}</h3>
-                    <div>
-                        <template v-for="(section, sectionIndex) in currentExperience" :key="sectionIndex">
-                            <h4
-                                style="margin-bottom: 24px; margin-top: 32px; color: var(--text-secondary); font-size: 1.1rem; font-weight: 500;">
-                                {{ l(section.section) }}
-                            </h4>
-                            <div v-for="(exp, index) in section.items" :key="index" class="timeline-item">
-                                <div class="timeline-title">{{ l(exp.position) }}</div>
-                                <div class="timeline-meta">{{ l(exp.period) }} • {{ exp.company }} — {{ exp.location }}
-                                </div>
-                                <div class="timeline-desc">{{ l(exp.description) }}</div>
-                            </div>
-                        </template>
-                    </div>
-
-                    <h3>{{ t('academicEducation') }}</h3>
-                    <div style="margin-top: 24px;">
-                        <div v-for="(edu, index) in currentEducation" :key="index" class="timeline-item">
-                            <div class="timeline-title">{{ l(edu.degree) }}</div>
-                            <div class="timeline-meta">{{ l(edu.period) }} • {{ edu.institution }}</div>
-                            <div class="timeline-desc" v-if="edu.description">{{ l(edu.description) }}</div>
-                        </div>
+            <div id="experiences" class="section" style="padding-top: 60px;">
+                <h2 class="section-title">{{ t('experiencesMenu') || 'Experiences' }}</h2>
+                <div style="max-width: 800px;">
+                    <div v-for="(exp, index) in recentExperiences" :key="index" class="timeline-item">
+                        <div class="timeline-title">{{ l(exp.position) }}</div>
+                        <div class="timeline-meta">{{ l(exp.period) }} • {{ exp.company }} — {{ exp.location }}</div>
+                        <div class="timeline-desc">{{ l(exp.description) }}</div>
                     </div>
                 </div>
+
+                <div class="download-resume-container" style="margin-top: 40px; text-align: left;">
+                    <p style="color: var(--text-secondary); margin-bottom: 16px;">{{ t('seeAllExperiences') || 'View all my experiences in my full resume.' }}</p>
+                    <a :href="currentLang === 'pt' ? 'Curriculos/Curriculum_Vitae_PT_BR.pdf' : 'Curriculos/Curriculum_vitae_EN.pdf'" target="_blank" class="btn btn-accent">
+                        <span class="material-icons">download</span> {{ t('downloadResume') || 'Download Resume' }}
+                    </a>
+                </div>
             </div>
+            </main>
         </div>
     </div>
 
