@@ -28,11 +28,7 @@ createApp({
         const params = new URLSearchParams(window.location.search);
         const projectId = params.get('id');
 
-        const allProjects = [
-            ...PORTFOLIO_DATA.appleStoreProjects,
-            ...PORTFOLIO_DATA.featuredProjects,
-            ...PORTFOLIO_DATA.otherProjects
-        ];
+        const allProjects = PORTFOLIO_DATA.projects;
 
         const foundProject = allProjects.find(p => p.id === projectId);
 

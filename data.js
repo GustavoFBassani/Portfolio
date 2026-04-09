@@ -45,9 +45,10 @@ Atualmente sou bolsista na Apple Developer Academy, onde desenvolvo projetos par
         photo: 'images/perfil.png'
     },
 
-    appleStoreProjects: [
+    projects: [
         {
             id: 'completeness',
+            inAppStore: true,
             title: 'Completeness',
             shortDescription: {
                 en: 'Habit tracking app to improve focus and daily productivity.',
@@ -80,6 +81,7 @@ Atualmente sou bolsista na Apple Developer Academy, onde desenvolvo projetos par
         },
         {
             id: 'nikki-journal',
+            inAppStore: true,
             title: 'Nikki Journal',
             shortDescription: {
                 en: 'Journaling app with Japanese aesthetics and immersive 3D elements.',
@@ -109,9 +111,40 @@ Atualmente sou bolsista na Apple Developer Academy, onde desenvolvo projetos par
                 { name: 'Rafael Toneto', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/rafael-toneto-429b76316/', photo: 'images/Contributors/RafaelToneto.jpeg' },
                 { name: 'Martina Adegas', role: 'Design', scrumRole: 'PM', linkedin: 'https://www.linkedin.com/in/martina-nogueira-da-gama-adegas/', photo: 'images/Contributors/Martina.jpeg' }
             ]
-        }
-    ],
-    featuredProjects: [
+        },
+        {
+            id: 'StarBits',
+            title: 'StarBits',
+            inAppStore: true,
+            shortDescription: {
+                en: 'A grid-based puzzle game where you guide a fire puffle through ice caves.',
+                pt: 'Grid game inteligente com ambientação congelada num projeto Game Challenge 2D via Apple.'
+            },
+            longDescription: {
+                en: "StarBits is an engaging grid-based puzzle game developed as a project for the Apple Game Challenge. Inspired by classic mini-games, the player must guide a fire puffle through increasingly complex ice caves without falling into the water. The gameplay revolves around tactical movement, melting ice tiles, pushing rocks to bridge gaps, and using portals to collect stars and reach the objective. Developed entirely with Apple's native frameworks, the app features a seamless combination of SwiftUI for responsive, modern menus (like the world and level selector), and SpriteKit for dynamic 2D mechanics. Local progression is securely managed using SwiftData, allowing players to unlock new worlds based on their performance. The codebase showcases strong architectural skills, employing a modular design that clearly separates game entities, tile management, and movement logic.",
+                pt: 'Criado ao longo da base de gamificação, ele se inspira em resoluções lógicas mecânicas e quebra-cabeças sob grades para fundir o mundo de blocos de gelos. Uma faísca e muitos movimentos cruciais a frente. A integração e os laços do GameplayKit juntamente ao SpriteKit ditam toda a força estrutural que este tipo de renderização precisa em processamento móvel e ao mesmo tempo funde aos menus vivos criados sobre SwiftUI nativo. Tudo está modularizado separando comportamentos de blocos específicos e dados rastreáveis da SwiftData por fase.'
+            },
+            what: {
+                en: "• Classic grid-based puzzle mechanics with progressive difficulty.\n• Multiple themed worlds and levels to unlock using collected stars.\n• Interactive elements including pushable rocks, melting ice, and portals.\n• Intuitive custom on-screen D-Pad controls designed for iOS.\n• Seamless integration between SwiftUI interfaces and SpriteKit game scenes.\n• Player progress and unlocked data persisted locally using SwiftData.\n• Clean architecture with isolated manager classes for entities and logic.",
+                pt: '• Motor clássico baseado em grids, detecção de colisões e física contínua aplicada com atrito em gelo.\n• Gestão customizada dos mundos dividida na lógica limpa em SwiftUI.\n• Ações exclusivas atreladas a reações secundárias, blocos rochosos arrastáveis empurrando gelos com base no peso das portas reativas.\n• Arquitetura forte, baseada em camadas gerenciadoras independentes no ecossistema sem pacotes de terceiros.\n• Progresso blindado e salvo veloz via SwiftData de ponta.'
+            },
+            image: "images/Starbits.png",
+            cardImage: 'images/StarbitsCard.png',
+            links: [
+                { url: "https://github.com/SandlerRodrigo/game-challenge", "label": "View on GitHub", "icon": "github" },
+                { url: "https://apps.apple.com/br/app/starbits/id6743553895", "label": "View on App Store", "icon": "apple" }
+            ],
+            tools: ["Swift", "SwiftUI", "SpriteKit", "SwiftData", "GameplayKit", "Xcode"],
+            mainTools: ["SwiftUI", "SpriteKit", "SwiftData"],
+            screenshots: ["images/Starbits-1.png", "images/Starbits-2.png", "images/Starbits-3.png", "images/Starbits-4.png", "images/Starbits-5.png", "images/Starbits-6.png"],
+            team: [
+                { name: 'Gustavo Bassani', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavofbassani/', photo: 'images/perfil.png' },
+                { name: 'Joao Carvalho', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/joão-pedro-teixeira-de-carvalho-6631b6224/', photo: 'images/Contributors/JoaoCarvalho.jpeg' },
+                { name: 'Rodrigo Sandler', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/rodrigo-sandler-1945a9220/', photo: 'images/Contributors/RodrigoSandler.png' },
+                { name: 'Julia Nascimento', role: 'Design', scrumRole: null, linkedin: 'https://www.linkedin.com/in/julianascimentocosta/', photo: 'images/Contributors/JuliaNascimento.png' },
+                { name: 'Giovana Diesel', role: 'Design', scrumRole: null, linkedin: 'https://www.linkedin.com/in/giovana-diesel/', photo: 'images/Contributors/GiovanaDiesel.jpeg' }
+            ]
+        },
         {
             id: 'freela-ontap',
             title: 'Freela-OnTap',
@@ -199,39 +232,6 @@ Atualmente sou bolsista na Apple Developer Academy, onde desenvolvo projetos par
                 { name: 'Gustavo Bassani', role: 'Dev / Design', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavofbassani/', photo: 'images/perfil.png' }
             ]
         },
-        {
-            id: 'StarBits',
-            title: 'StarBits',
-            shortDescription: {
-                en: 'A grid-based puzzle game where you guide a fire puffle through ice caves.',
-                pt: 'Grid game inteligente com ambientação congelada num projeto Game Challenge 2D via Apple.'
-            },
-            longDescription: {
-                en: "StarBits is an engaging grid-based puzzle game developed as a project for the Apple Game Challenge. Inspired by classic mini-games, the player must guide a fire puffle through increasingly complex ice caves without falling into the water. The gameplay revolves around tactical movement, melting ice tiles, pushing rocks to bridge gaps, and using portals to collect stars and reach the objective. Developed entirely with Apple's native frameworks, the app features a seamless combination of SwiftUI for responsive, modern menus (like the world and level selector), and SpriteKit for dynamic 2D mechanics. Local progression is securely managed using SwiftData, allowing players to unlock new worlds based on their performance. The codebase showcases strong architectural skills, employing a modular design that clearly separates game entities, tile management, and movement logic.",
-                pt: 'Criado ao longo da base de gamificação, ele se inspira em resoluções lógicas mecânicas e quebra-cabeças sob grades para fundir o mundo de blocos de gelos. Uma faísca e muitos movimentos cruciais a frente. A integração e os laços do GameplayKit juntamente ao SpriteKit ditam toda a força estrutural que este tipo de renderização precisa em processamento móvel e ao mesmo tempo funde aos menus vivos criados sobre SwiftUI nativo. Tudo está modularizado separando comportamentos de blocos específicos e dados rastreáveis da SwiftData por fase.'
-            },
-            what: {
-                en: "• Classic grid-based puzzle mechanics with progressive difficulty.\n• Multiple themed worlds and levels to unlock using collected stars.\n• Interactive elements including pushable rocks, melting ice, and portals.\n• Intuitive custom on-screen D-Pad controls designed for iOS.\n• Seamless integration between SwiftUI interfaces and SpriteKit game scenes.\n• Player progress and unlocked data persisted locally using SwiftData.\n• Clean architecture with isolated manager classes for entities and logic.",
-                pt: '• Motor clássico baseado em grids, detecção de colisões e física contínua aplicada com atrito em gelo.\n• Gestão customizada dos mundos dividida na lógica limpa em SwiftUI.\n• Ações exclusivas atreladas a reações secundárias, blocos rochosos arrastáveis empurrando gelos com base no peso das portas reativas.\n• Arquitetura forte, baseada em camadas gerenciadoras independentes no ecossistema sem pacotes de terceiros.\n• Progresso blindado e salvo veloz via SwiftData de ponta.'
-            },
-            image: "images/Starbits.png",
-            cardImage: 'images/StarbitsCard.png',
-            links: [
-                { url: "https://github.com/SandlerRodrigo/game-challenge", "label": "View on GitHub", "icon": "github" }
-            ],
-            tools: ["Swift", "SwiftUI", "SpriteKit", "SwiftData", "GameplayKit", "Xcode"],
-            mainTools: ["SwiftUI", "SpriteKit", "SwiftData"],
-            screenshots: ["images/Starbits-1.png", "images/Starbits-2.png", "images/Starbits-3.png", "images/Starbits-4.png", "images/Starbits-5.png", "images/Starbits-6.png"],
-            team: [
-                { name: 'Gustavo Bassani', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/gustavofbassani/', photo: 'images/perfil.png' },
-                { name: 'Joao Carvalho', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/joão-pedro-teixeira-de-carvalho-6631b6224/', photo: 'images/Contributors/JoaoCarvalho.jpeg' },
-                { name: 'Rodrigo Sandler', role: 'Dev', scrumRole: null, linkedin: 'https://www.linkedin.com/in/rodrigo-sandler-1945a9220/', photo: 'images/Contributors/RodrigoSandler.png' },
-                { name: 'Julia Nascimento', role: 'Design', scrumRole: null, linkedin: 'https://www.linkedin.com/in/julianascimentocosta/', photo: 'images/Contributors/JuliaNascimento.png' },
-                { name: 'Giovana Diesel', role: 'Design', scrumRole: null, linkedin: 'https://www.linkedin.com/in/giovana-diesel/', photo: 'images/Contributors/GiovanaDiesel.jpeg' }
-            ]
-        }
-    ],
-    otherProjects: [
         {
             id: 'api-challenge',
             title: 'API-Challenge',

@@ -28,10 +28,7 @@ createApp({
             return allExps.slice(0, 2);
         },
         allProjects() {
-            const apple = this.appleStoreProjects.map(p => ({ ...p, inAppStore: true }));
-            const feat = this.featuredProjects.map(p => ({ ...p, inAppStore: false }));
-            const others = this.otherProjects.map(p => ({ ...p, inAppStore: false }));
-            return [...apple, ...feat, ...others];
+            return PORTFOLIO_DATA.projects.map(p => ({ ...p, inAppStore: p.inAppStore ?? false }));
         }
     },
     methods: {
